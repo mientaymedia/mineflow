@@ -7,3 +7,6 @@ __pycache__/
 .env
 content-queue.csv
 run.log
+
+# Outreach - danh sách khách hàng tiềm năng là dữ liệu cá nhân, không commit
+prospect-list.csv

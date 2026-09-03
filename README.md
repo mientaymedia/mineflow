@@ -5,7 +5,7 @@ Claude Code skills used to build and grow MineFlow.
 | Skill | Dùng khi |
 |---|---|
 | [`zalo-mini-app`](skills/zalo-mini-app/) | Xây Zalo Mini App: ZaUI, zmp-sdk, payment, Open API, eKYC, publish |
-| [`linkedin-auto-post`](skills/linkedin-auto-post/) | Xây nội dung LinkedIn quảng bá sản phẩm và đăng tự động bài viết kèm ảnh |
+| [`linkedin-auto-post`](skills/linkedin-auto-post/) | Nội dung LinkedIn quảng bá sản phẩm, đăng tự động bài kèm ảnh, và chuỗi outreach tới chủ shop bán sàn |
 
 ---
 
@@ -123,12 +123,13 @@ MIT
 
 ## linkedin-auto-post
 
-Xây nội dung LinkedIn quảng bá sản phẩm B2B SaaS và đăng tự động bài viết kèm ảnh.
+Nội dung LinkedIn quảng bá sản phẩm B2B, đăng tự động bài kèm ảnh, và chuỗi kết nối tới chủ shop bán sàn.
 
-Hai lớp:
+Ba lớp:
 
-- **Content** — ICP, 5 content pillar, 20 hook, 12 template bài tiếng Việt, playbook làm ảnh, lịch 30 ngày, KPI dẫn tới pipeline.
-- **Automation** — hàng đợi CSV + script Python (chỉ thư viện chuẩn) đẩy bài kèm ảnh qua LinkedIn Posts API và Images API, chạy bằng cron hoặc GitHub Actions.
+- **Content** — ICP, bậc thang ba dòng sản phẩm, 5 content pillar, 20 hook, 12 template bài tiếng Việt, playbook làm ảnh, lịch 30 ngày, KPI dẫn tới pipeline.
+- **Publish** — hàng đợi CSV + script Python (chỉ thư viện chuẩn) đẩy bài kèm ảnh qua LinkedIn Posts API và Images API, chạy bằng cron hoặc GitHub Actions.
+- **Outreach** — chuỗi 5 chạm tới chủ shop bán sàn, tin nhắn điền sẵn, hạn mức an toàn, pipeline theo dõi trong CSV. Script soạn và nhắc việc; **người thật bấm gửi** — tự động gửi hàng loạt vi phạm điều khoản LinkedIn.
 
 ```bash
 export LINKEDIN_ACCESS_TOKEN="..."
@@ -140,6 +141,9 @@ python3 skills/linkedin-auto-post/scripts/linkedin_post.py \
 
 # Đăng các bài đã tới hạn trong hàng đợi
 python3 skills/linkedin-auto-post/scripts/run_queue.py --queue content-queue.csv --limit 1
+
+# Việc outreach hôm nay (script không tự gửi gì lên LinkedIn)
+python3 skills/linkedin-auto-post/scripts/outreach_queue.py --list prospect-list.csv
 ```
 
 ### Skill Structure
@@ -151,13 +155,17 @@ skills/linkedin-auto-post/
 │   ├── content-strategy.md      # ICP, pillar, hook bank, lịch 30 ngày, KPI, rủi ro
 │   ├── post-templates.md        # 12 template bài viết tiếng Việt
 │   ├── image-playbook.md        # kích thước, 6 mẫu visual, bộ màu, alt text
+│   ├── outreach-playbook.md     # tệp chủ shop bán sàn, chuỗi 5 chạm, hạn mức, xử lý phản đối
 │   ├── linkedin-api.md          # OAuth, author URN, Images API, Posts API, lỗi thường gặp
 │   └── automation-runbook.md    # schema CSV, cron, GitHub Actions, token, guardrail
 ├── scripts/
 │   ├── linkedin_post.py         # đăng 1 bài: text / 1 ảnh / nhiều ảnh
-│   └── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả
+│   ├── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả
+│   └── outreach_queue.py        # in việc outreach hôm nay, theo dõi pipeline
 └── assets/
     ├── content-queue.example.csv
+    ├── prospect-list.example.csv
+    ├── messages/                # 5 mẫu tin nhắn outreach
     ├── drafts/
     └── img/
 ```
