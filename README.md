@@ -127,7 +127,7 @@ Nội dung LinkedIn quảng bá sản phẩm B2B, đăng tự động bài kèm 
 
 Ba lớp:
 
-- **Content** — ICP, bậc thang ba dòng sản phẩm, 5 content pillar, 20 hook, 12 template bài tiếng Việt, playbook làm ảnh, lịch 30 ngày, KPI dẫn tới pipeline.
+- **Content** — tách cash engine (bán theo cầu tìm kiếm) khỏi growth engine (bán bằng nội dung), ICP, 5 content pillar, 20 hook, 12 template bài tiếng Việt, playbook làm ảnh, lịch 30 ngày, KPI dẫn tới pipeline.
 - **Publish** — hàng đợi CSV + script Python (chỉ thư viện chuẩn) đẩy bài kèm ảnh qua LinkedIn Posts API và Images API, chạy bằng cron hoặc GitHub Actions.
 - **Outreach** — chuỗi 5 chạm tới chủ shop bán sàn, tin nhắn điền sẵn, hạn mức an toàn, pipeline theo dõi trong CSV. Script soạn và nhắc việc; **người thật bấm gửi** — tự động gửi hàng loạt vi phạm điều khoản LinkedIn.
 
@@ -152,7 +152,7 @@ python3 skills/linkedin-auto-post/scripts/outreach_queue.py --list prospect-list
 skills/linkedin-auto-post/
 ├── SKILL.md
 ├── references/
-│   ├── content-strategy.md      # ICP, pillar, hook bank, lịch 30 ngày, KPI, rủi ro
+│   ├── content-strategy.md      # hai engine, ICP, pillar, hook bank, lịch 30 ngày, KPI, rủi ro
 │   ├── post-templates.md        # 12 template bài viết tiếng Việt
 │   ├── image-playbook.md        # kích thước, 6 mẫu visual, bộ màu, alt text
 │   ├── outreach-playbook.md     # tệp chủ shop bán sàn, chuỗi 5 chạm, hạn mức, xử lý phản đối

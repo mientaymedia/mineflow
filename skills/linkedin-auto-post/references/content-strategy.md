@@ -5,71 +5,99 @@
 > - Khách hàng thật đang dùng: **Hậu Tâm Official** (một khách) — đây là case study duy nhất hiện có.
 > - Ba dòng sản phẩm chủ lực: **MineFlow CDP**, **Google Workspace**, **Zalo Business Solutions**.
 
-## 0. Ba "chủ lực" — cách xử lý mà không phân tán
+## 0. Hai engine, không phải một bậc thang
 
-Ba sản phẩm chủ lực ở cùng một thời điểm, với nguồn lực một người, thường là ba thứ đều dở.
-Nhưng ba dòng này **không rời rạc** — chúng có thể xếp thành một bậc thang nếu bán cho **cùng một ICP**.
+> Dữ kiện bổ sung 2026-09-03: khách Google Workspace là **doanh nghiệp đã dùng, cần gia hạn,
+> hoặc muốn chuyển sang hệ sinh thái Google**. Đây là tệp và hành vi mua **khác hẳn** chủ shop bán sàn.
 
-| Bậc | Dòng sản phẩm | Vai trò | Biên | Doanh thu định kỳ | Độ khó bán |
-|---|---|---|---|---|---|
-| 1 | **Google Workspace** | Cash engine — dễ mua, chu kỳ bán ngắn | Thấp (reseller) | Cao, gia hạn hằng năm | Thấp |
-| 2 | **Zalo Business Solutions** (OA, ZNS, Mini App) | Cash engine — triển khai theo dự án | Trung bình | Trung bình (phí tin nhắn) | Trung bình |
-| 3 | **MineFlow CDP + Loyalty** | Growth bet — sản phẩm sở hữu, biên cao nhất | Cao | Cao (SaaS) | Cao |
+Vì vậy ba dòng sản phẩm **không xếp được thành một bậc thang bán cho cùng một người**.
+Chúng là hai engine khác nhau, cần hai kênh khác nhau.
 
-**Nguyên tắc trên LinkedIn: bán bậc thang, không bán ba sản phẩm song song.**
+| | **Cash Engine** | **Growth Engine** |
+|---|---|---|
+| Sản phẩm | Google Workspace | MineFlow CDP + Zalo Business Solutions |
+| Loại cầu | **Cầu có sẵn** — khách tự biết mình cần, có deadline gia hạn | **Cầu phải tạo** — khách chưa biết mình đang mất tiền |
+| Người mua | IT / kế toán / chủ DN nhỏ | Founder / COO của shop bán sàn |
+| Chu kỳ bán | Ngày đến tuần | Tuần đến tháng |
+| Biên | Thấp (reseller) | Cao |
+| Cạnh tranh bằng | Giá, tốc độ, hỗ trợ | Hiểu vấn đề, kết quả kinh doanh |
+| **Kênh đúng** | **Google Search, SEO, danh sách gia hạn, giới thiệu** | **LinkedIn content + outreach** |
 
-- Bậc 1 và 2 là **cửa vào**. Khách mua Workspace hoặc ZNS trước, rẻ, ít rủi ro.
-- Bậc 3 là **nơi tạo lợi nhuận và doanh thu định kỳ**. Chỉ bán sau khi đã có quan hệ ở bậc 1–2.
-- Nội dung LinkedIn **không** chia ba luồng. Một luồng duy nhất, xem mục 2.
+### Hệ quả: Google Workspace KHÔNG thuộc kế hoạch nội dung LinkedIn
 
-> **Chưa đủ dữ liệu để kết luận nên dồn vào bậc nào.** Cần doanh thu, gross profit và
-> số giờ Henry bỏ ra cho từng dòng trong 3 tháng gần nhất. Xem mục 11.
+Viết bài LinkedIn để bán Workspace là sai kênh. Người cần gia hạn Workspace **đi tìm trên Google**,
+không đọc bài viết trên LinkedIn rồi mới nhận ra mình cần. Nội dung không tạo thêm cầu ở đây,
+chỉ tiêu thời gian.
 
-## 1. ICP — một ô duy nhất cho cả ba dòng sản phẩm
+Google Workspace vẫn có **hai vai trò** trong hệ thống này:
 
-Ba sản phẩm chỉ xếp được thành bậc thang khi bán cho **cùng một người mua**.
-Nếu ICP của Google Workspace khác ICP của MineFlow, bậc thang gãy và Henry đang chạy ba business line thật.
+1. **Tín hiệu uy tín** — để "Google Workspace Partner" trong headline và About của profile.
+   Nó trả lời câu hỏi thầm của người lạ: "người này có thật không?". Đây là *tài sản profile*, không phải *nội dung*.
+2. **Nguồn khách cross-sell** — xem mục 0b. Đây là phần giá trị nhất, và nó không nằm trên LinkedIn.
+
+## 0b. Danh sách khách Workspace hiện tại — đòn bẩy rẻ nhất Henry đang có
+
+Henry đã có một tập khách **đang trả tiền và đã tin tưởng**. Bán tiếp cho họ rẻ hơn
+LinkedIn nhiều lần: không cần tạo độ tin, không cần tìm kiếm, không cần chờ 6 tuần.
+
+| Kênh | Chi phí có 1 cuộc trò chuyện | Thời gian tới cuộc đầu tiên |
+|---|---|---|
+| **Gọi/nhắn khách Workspace hiện tại** | ~0đ | **Hôm nay** |
+| LinkedIn outreach lạnh | 20 phút/ngày × 6 tuần | 2–4 tuần |
+| Nội dung LinkedIn | 4 giờ/tuần × 8 tuần | 6–8 tuần |
+
+**Vì vậy: trước khi chạy LinkedIn, hãy chạy hết danh sách khách Workspace hiện tại.**
+
+Việc cần làm (không dùng script trong skill này — đây là kênh Zalo/điện thoại/email):
+
+1. Liệt kê toàn bộ khách Workspace đang hoạt động. Đánh dấu ai **bán hàng qua sàn hoặc Zalo**.
+2. Với nhóm có bán hàng: gọi hoặc nhắn Zalo, không email. Câu mở:
+   > "Anh/chị ơi, em rà lại tài khoản Workspace của bên mình. Tiện thể hỏi thăm — sau khi khách mua trên sàn, bên mình có cách nào liên lạc lại với họ không, hay dữ liệu nằm hết ở sàn?"
+3. Ai trả lời "dữ liệu nằm ở sàn" hoặc "không liên lạc lại được" → **đó là lead MineFlow**. Đặt buổi dựng thử 45 phút.
+4. Ai không bán hàng qua sàn → giữ nguyên quan hệ Workspace, không ép bán.
+
+**Chỉ tiêu tuần đầu:** liên hệ 100% khách Workspace đang hoạt động, đặt được ít nhất **2 buổi dựng thử**.
+Nếu tập khách hiện tại không tạo nổi 2 buổi, LinkedIn lạnh gần như chắc chắn cũng không.
+Đó là tín hiệu vấn đề nằm ở offer, không ở kênh.
+
+## 1. ICP cho LinkedIn — chủ shop bán sàn
+
+LinkedIn phục vụ **Growth Engine**, không phục vụ Workspace. ICP duy nhất:
 
 | Trường | Giá trị |
 |---|---|
 | Ngành | Bán lẻ chuỗi / F&B chuỗi / TMĐT bán qua website + Shopee + TikTok Shop + Zalo |
-| Quy mô | 20–200 nhân sự, hoặc 3–30 điểm bán, hoặc 500–5.000 đơn/tháng |
-| Người quyết định | **Founder hoặc Giám đốc vận hành** — người vừa ký Workspace vừa ký CDP. Không phải IT admin |
-| Nỗi đau cấp thiết | Doanh nghiệp đang "đi thuê" hạ tầng và khách hàng của chính mình: email cá nhân, dữ liệu khách nằm trên sàn, liên lạc phụ thuộc quảng cáo |
-| Thiệt hại nếu không giải quyết | Trả tiền quảng cáo để mua lại chính khách cũ; mất dữ liệu khi nhân sự nghỉ; mất kênh liên lạc khi nền tảng đổi luật |
-| Kết quả cam kết | Sở hữu hạ tầng (Workspace) → sở hữu kênh liên lạc (Zalo OA/ZNS) → sở hữu dữ liệu khách (MineFlow) |
-| Cửa vào rẻ nhất | Google Workspace hoặc một chiến dịch ZNS |
-| Nơi tạo lợi nhuận | MineFlow CDP + Loyalty, tính phí hằng tháng |
+| Ưu tiên ngành | TPCN, mỹ phẩm, thời trang, mẹ và bé — tỉ lệ mua lại cao |
+| Quy mô | 500–5.000 đơn/tháng, hoặc 3–30 điểm bán, hoặc 20–200 nhân sự |
+| Người quyết định | **Founder hoặc Giám đốc vận hành**. Không phải IT admin |
+| Nỗi đau cấp thiết | Khách mua trên sàn xong là mất liên lạc; dữ liệu nằm ở Shopee/TikTok, không remarketing được |
+| Thiệt hại nếu không giải quyết | Trả tiền quảng cáo để mua lại chính khách cũ của mình |
+| Kết quả cam kết | Sở hữu kênh liên lạc (Zalo OA/ZNS) → sở hữu dữ liệu khách (MineFlow) |
+| Cửa vào rẻ nhất | Một chiến dịch ZNS, hoặc buổi dựng thử 45 phút |
+| Nơi tạo lợi nhuận | MineFlow CDP + Loyalty, phí hằng tháng |
+| **Loại trừ** | Dropshipper cá nhân, shop dưới 100 đơn/tháng, đại lý không sở hữu thương hiệu |
 
-**Việc kiểm chứng bắt buộc trước khi viết bài đầu tiên:** tìm cho đủ **30 người đúng ô này trên LinkedIn**.
-Không đủ 30 → LinkedIn sai kênh cho ICP này, dừng, chuyển sang Facebook Group / Zalo / outbound trực tiếp.
+**Kiểm chứng bắt buộc trước bài viết đầu tiên:** tìm đủ **30 người đúng ô này trên LinkedIn**.
+Không đủ 30 → LinkedIn sai kênh cho tệp này. Dừng, dồn vào mục 0b và Facebook Group TMĐT.
 
-## 2. Positioning — một câu cho cả danh mục
+## 2. Positioning — một câu cho Growth Engine
 
-> Doanh nghiệp Việt Nam đang đi thuê chính khách hàng của mình.
-> Tôi giúp họ sở hữu lại: hạ tầng làm việc, kênh liên lạc, và dữ liệu khách hàng.
+> Doanh nghiệp Việt Nam bán trên sàn đang đi thuê chính khách hàng của mình.
+> Tôi giúp họ sở hữu lại kênh liên lạc và dữ liệu khách.
 
-Ba mệnh đề con, mỗi mệnh đề gắn với một bậc:
+Hai mệnh đề con:
 
-| Mệnh đề | Bậc | Sản phẩm |
-|---|---|---|
-| "Sở hữu hạ tầng làm việc của bạn" | 1 | Google Workspace |
-| "Sở hữu kênh liên lạc với khách" | 2 | Zalo OA / ZNS / Mini App |
-| "Sở hữu dữ liệu khách hàng" | 3 | MineFlow CDP + Loyalty |
+| Mệnh đề | Sản phẩm | Tỉ lệ bài |
+|---|---|---:|
+| "Sở hữu **dữ liệu** khách hàng" | MineFlow CDP + Loyalty | 60% |
+| "Sở hữu **kênh liên lạc** với khách" | Zalo OA / ZNS / Mini App | 40% |
+| ~~Google Workspace~~ | — | **0%** — sai kênh, xem mục 0 |
 
-Quy tắc: mọi bài viết phải củng cố **đúng một** mệnh đề.
-Bài không thuộc mệnh đề nào là distraction — bỏ, không "cho vào cho đủ lịch".
+Quy tắc: mọi bài phải củng cố **đúng một** mệnh đề. Bài không thuộc mệnh đề nào là distraction — bỏ.
 
-Phân bổ nội dung gợi ý cho 30 ngày đầu:
-
-| Mệnh đề | Tỉ lệ bài | Lý do |
-|---|---:|---|
-| Sở hữu dữ liệu khách hàng | 50% | Đây là nơi Henry có sản phẩm riêng và biên cao nhất |
-| Sở hữu kênh liên lạc | 30% | Nỗi đau dễ nhận ra nhất, dẫn được sang bậc 3 |
-| Sở hữu hạ tầng làm việc | 20% | Cửa vào rẻ, chu kỳ bán ngắn, nuôi dòng tiền |
-
-**Không viết bài "so sánh gói Google Workspace".** Đó là nội dung ai cũng viết được và không dẫn tới bậc 3.
-Viết về **hệ quả kinh doanh** của việc dùng email cá nhân và dữ liệu nằm ngoài tầm kiểm soát.
+**Ngoại lệ duy nhất cho Workspace:** bài Founder POV kể chuyện *vận hành* một công ty một người
+bằng Google Workspace + AI. Đó là nội dung Pillar 4 (tạo uy tín), không phải bài bán Workspace.
+Tối đa 1 bài/tháng.
 
 ## 3. Năm content pillar
 
@@ -204,7 +232,8 @@ vấn đề nằm ở ICP hoặc offer, không phải ở nội dung. Dừng vi�
 | Rủi ro | Mức | Xử lý |
 |---|---|---|
 | ICP không hoạt động trên LinkedIn (chủ shop VN dùng Facebook/Zalo nhiều hơn) | **Cao** | Kiểm chứng trước: tìm 30 người đúng ICP trên LinkedIn. Không đủ 30 → đổi kênh, đừng đổ công vào LinkedIn |
-| Ba dòng sản phẩm kéo nội dung về ba hướng | **Cao** | Bám mục 2: một câu positioning, ba mệnh đề con, tỉ lệ 50/30/20. Không mở luồng nội dung thứ tư |
+| Kéo Google Workspace vào nội dung LinkedIn | **Cao** | Workspace là cầu có sẵn, kênh đúng là Google Search. Bám tỉ lệ 60/40 ở mục 2 |
+| Chạy LinkedIn trước khi khai thác hết khách Workspace hiện tại | **Cao** | Làm mục 0b trước. Rẻ hơn và nhanh hơn LinkedIn nhiều lần |
 | Chỉ có 1 case study → Pillar 2 cạn sau 4 bài | Cao | Xem mục 10: xin phép Hậu Tâm Official, và dùng chính MineFlow làm case nội bộ |
 | Tốn thời gian Build thay vì Sell | Cao | Trần cứng 4 giờ/tuần. Vượt là dừng |
 | Bài tự động đăng sai nội dung/sai giờ | Trung bình | `--dry-run` bắt buộc trước lần chạy đầu; queue có cột `status` duyệt tay |
@@ -234,14 +263,25 @@ Chưa có ba thứ đó thì **không viết bài Pillar 2** về họ. Bịa s�
 
 ## 11. Dữ liệu Henry cần cung cấp để chốt ưu tiên
 
-Chưa đủ dữ liệu để kết luận nên dồn nguồn lực vào MineFlow, Google Workspace hay Zalo Business Solutions.
+Cấu trúc hai engine ở mục 0 đã rõ. Nhưng chưa đủ dữ liệu để trả lời câu hỏi tiền:
+**Cash Engine có nuôi nổi Growth Engine không?**
+
 Cần bảng này cho **3 tháng gần nhất**:
 
-| Dòng sản phẩm | Doanh thu thực thu | Gross profit | Số giờ Henry/tuần | Số khách đang trả tiền | Doanh thu định kỳ? |
+| Dòng sản phẩm | Doanh thu thực thu | Gross profit | Số giờ Henry/tuần | Số khách đang trả tiền | Định kỳ? |
 |---|---:|---:|---:|---:|---|
-| MineFlow CDP | | | | 1 (Hậu Tâm) | |
-| Google Workspace | | | | | |
+| Google Workspace | | | | | Gia hạn năm |
 | Zalo Business Solutions | | | | | |
+| MineFlow CDP | | | | 1 (Hậu Tâm) | |
 
-Có bảng này, dùng khung chấm điểm 7 tiêu chí để chọn **một** ưu tiên chiến lược.
-Chưa có, giữ nguyên tỉ lệ nội dung 50/30/20 ở mục 2 và **không** tăng đầu tư vào dòng nào.
+Cộng thêm hai con số quyết định mục 0b:
+
+| Câu hỏi | Trả lời |
+|---|---|
+| Bao nhiêu khách Workspace **đang hoạt động**? | |
+| Trong đó bao nhiêu **bán hàng qua sàn hoặc Zalo**? | |
+
+Con số thứ hai chính là số lead MineFlow Henry đang có sẵn mà chưa gọi.
+Nếu nó lớn hơn 20, **dừng đọc phần LinkedIn và đi gọi trước**.
+
+Chưa có bảng này, giữ nguyên tỉ lệ nội dung 60/40 ở mục 2 và không tăng đầu tư vào dòng nào.
