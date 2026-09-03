@@ -82,15 +82,16 @@ python3 skills/lint_posts.py --queue content-queue.csv
 cat drafts/w1-t3-ba-ho-so-mot-khach.txt
 ```
 
-Duyệt xong, mở khoá đúng những bài đã đọc:
+Duyệt xong, mở khoá bằng `approve.sh`:
 
 ```bash
-# Mở khoá một bài
-sed -i 's/^\(w1-t3,[^,]*\),draft,/\1,ready,/' content-queue.csv
-
-# Hoặc mở khoá cả tuần 1
-sed -i 's/^\(w1-t[357],[^,]*\),draft,/\1,ready,/' content-queue.csv
+./approve.sh --list          # xem trạng thái toàn bộ hàng đợi
+./approve.sh --week 1        # mở khoá cả tuần 1
+./approve.sh w2-t3 w2-t7     # hoặc từng bài
 ```
+
+`approve.sh` chạy lint trước và **từ chối mở khoá bài còn lỗi** — ba bài khung
+chờ nguyên liệu sẽ không mở được cho tới khi viết xong.
 
 Kiểm tra lại trước khi push:
 

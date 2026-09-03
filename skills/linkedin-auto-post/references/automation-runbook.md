@@ -83,8 +83,18 @@ python3 ~/mineflow/skills/linkedin-auto-post/scripts/run_queue.py \
 ops-repo-template/
 ├── .github/workflows/linkedin-post.yml   # đăng bài, 12 lần/ngày trong khung giờ đăng
 ├── .github/workflows/gws-renewal.yml     # nhắc gia hạn, mở issue khi có việc
+├── approve.sh                            # mở khoá bài đã duyệt: draft -> ready
 ├── .gitignore
 └── README.md                             # hướng dẫn cài đặt 5 bước
+```
+
+`approve.sh` chạy lint trước khi mở khoá và **từ chối bài còn lỗi**, nên không thể vô tình
+đưa một khung chờ nguyên liệu lên feed:
+
+```bash
+./approve.sh --list        # xem trạng thái hàng đợi
+./approve.sh --week 1      # mở khoá cả tuần
+./approve.sh w2-t3         # hoặc từng bài
 ```
 
 Hoặc chạy trên máy cá nhân: `scripts/install_cron.sh ~/linkedin-ops` — cài cron,
