@@ -1,4 +1,4 @@
 id,publish_at,status,text_file,image,alt_text,visibility,post_urn,posted_at,note
-w1-t3,2026-09-08 08:00,ready,drafts/w1-t3-chi-phi-khach-cu.txt,img/w1-t3-big-number.png,Con số 41.000 khách trong POS và 0 khách remarketing được,PUBLIC,,,
-w1-t5,2026-09-10 08:00,draft,drafts/w1-t5-checklist-gop-du-lieu.txt,img/w1-t5-checklist.png,Checklist 7 bước gộp dữ liệu khách hàng từ POS Shopee và Zalo OA,PUBLIC,,,
-w1-t7,2026-09-12 20:00,draft,drafts/w1-t7-vi-sao-toi-xay.txt,,,PUBLIC,,,
+w1-t3,2026-09-08 08:00,draft,drafts/w1-t3-ba-ho-so-mot-khach.txt,img/w1-t3-ba-ho-so.png,Sơ đồ POS cửa hàng Sàn TMĐT và Zalo OA tạo ra ba hồ sơ khác nhau cho cùng một khách hàng,PUBLIC,,,Pillar 1 - Problem. Henry duyệt rồi đổi status sang ready
+w1-t5,2026-09-10 08:00,draft,drafts/w1-t5-checklist-gop-du-lieu.txt,img/w1-t5-checklist.png,Checklist bảy bước gộp dữ liệu khách hàng trong 30 ngày,PUBLIC,,,Pillar 3 - How-to. Henry duyệt rồi đổi status sang ready
+w1-t7,2026-09-12 20:00,draft,drafts/w1-t7-thue-khach-hang.txt,img/w1-t7-tai-san.png,Câu trích dẫn quảng cáo là chi phí danh sách khách hàng là tài sản,PUBLIC,,,Pillar 4 - POV. Henry duyệt rồi đổi status sang ready

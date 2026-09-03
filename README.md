@@ -161,11 +161,13 @@ skills/linkedin-auto-post/
 │   ├── linkedin-api.md          # OAuth, author URN, Images API, Posts API, lỗi thường gặp
 │   └── automation-runbook.md    # schema CSV, cron, GitHub Actions, token, guardrail
 ├── scripts/
+│   ├── make_image.py            # dựng ảnh 1200x1200 từ 5 mẫu visual (Chromium headless)
 │   ├── linkedin_post.py         # đăng 1 bài: text / 1 ảnh / nhiều ảnh
 │   ├── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả
 │   └── outreach_queue.py        # in việc outreach hôm nay, theo dõi pipeline
 └── assets/
-    ├── content-queue.example.csv
+    ├── content-queue.example.csv # hàng đợi tuần 1, 3 bài đã viết sẵn ở status=draft
+    ├── weekly-input-brief.md
     ├── prospect-list.example.csv
     ├── messages/                # 5 mẫu tin nhắn outreach
     ├── drafts/

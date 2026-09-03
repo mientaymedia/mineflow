@@ -59,9 +59,21 @@ Rất nhiều font display quốc tế không có glyph tiếng Việt.
 1. Viết bài trước. Rút ra **một** câu hoặc **một** con số đắt nhất.
 2. Chọn mẫu V1–V6 theo pillar.
 3. Dựng ảnh — chọn một trong ba cách:
-   - **Canva** (nhanh nhất): tạo 6 template một lần, sau đó chỉ thay chữ.
-   - **AI tạo ảnh**: chỉ dùng cho ảnh nền/minh hoạ trừu tượng. **Không dùng AI để tạo biểu đồ hay số liệu** — AI viết sai số và sai chính tả tiếng Việt.
+   - **`scripts/make_image.py`** (mặc định): render HTML rồi chụp bằng Chromium headless.
+     Đúng bộ màu, đúng kích thước, chữ luôn sắc nét, không cần cài gì thêm.
+     ```bash
+     python3 scripts/make_image.py --template checklist --out img/w1.png \
+       --field title="Gộp dữ liệu khách trong 30 ngày" \
+       --field items="Bước 1;Bước 2;Bước 3" \
+       --field footer="Không bước nào cần lập trình"
+     ```
+     Mẫu: `big-number` (V1), `contrast` (V2), `checklist` (V3), `flow` (V4), `quote` (V6).
+     Danh sách ngăn bằng dấu `;`. Thêm `--print-html` để xem HTML mà không render.
+   - **Canva**: khi cần bố cục ngoài 5 mẫu trên.
    - **Screenshot thật**: cho V5, luôn làm mờ dữ liệu khách hàng.
+
+   **Không dùng AI sinh ảnh để tạo biểu đồ hay số liệu** — AI viết sai số và sai dấu tiếng Việt.
+   Chỉ dùng AI sinh ảnh cho nền hoặc minh hoạ trừu tượng.
 4. Xuất PNG, đặt tên `YYYY-MM-DD-slug.png`, lưu vào thư mục ảnh của hàng đợi.
 5. Viết `alt_text` mô tả **nội dung thật** của ảnh, không nhét từ khoá.
 
@@ -94,4 +106,5 @@ Tuần 4: V2 → V4 → V1
 | Logo to hơn nội dung | Trông như quảng cáo, tương tác giảm |
 | Screenshot còn nguyên tên/SĐT khách | **Rủi ro pháp lý về dữ liệu cá nhân** |
 | Chữ dưới 40px | Không đọc được trên mobile — 80% người xem dùng mobile |
+| Dòng cuối sát mép dưới | Dấu tiếng Việt và chân chữ `g`, `y` bị cắt. `make_image.py` đã đặt `line-height:1.6` cho dòng đầu/cuối để tránh |
 | Số liệu bịa để ảnh "đẹp" | Mất khách khi họ hỏi lại trong discovery call |
