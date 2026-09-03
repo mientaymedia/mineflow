@@ -1,0 +1,59 @@
+name: LinkedIn auto-post
+
+# Cron của GitHub Actions tính theo UTC. Giờ VN = UTC+7.
+# Khung chạy dưới đây phủ 07:00-09:30 và 19:00-21:30 giờ VN — đủ rộng cho
+# lịch đăng 08:00 và 20:00, và cho phép Actions trễ vài phút vào giờ cao điểm.
+# 12 lần/ngày, mỗi lần ~30 giây => khoảng 180 phút Actions mỗi tháng.
+on:
+  schedule:
+    - cron: "0,30 0-2,12-14 * * *"
+  workflow_dispatch:          # cho phép chạy tay từ tab Actions
+
+concurrency:
+  group: linkedin-post        # không để hai lần chạy chồng nhau ghi đè CSV
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write         # để commit ngược trạng thái hàng đợi
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Soát bài bằng lint
+        run: |
+          python3 skills/lint_posts.py --queue content-queue.csv || true
+
+      - name: Đăng bài đã tới hạn
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: |
+          python3 skills/run_queue.py \
+            --queue content-queue.csv \
+            --limit 1 \
+            --tz-offset 7 | tee run-output.txt
+
+      - name: Ghi ngược trạng thái hàng đợi
+        if: always()
+        run: |
+          git config user.name  "linkedin-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content-queue.csv
+          git diff --staged --quiet || git commit -m "chore: cập nhật trạng thái hàng đợi"
+          git push
+
+      - name: Tóm tắt kết quả
+        if: always()
+        run: |
+          {
+            echo "### Kết quả đăng bài"
+            echo '```'
+            cat run-output.txt 2>/dev/null || echo "(không có output)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

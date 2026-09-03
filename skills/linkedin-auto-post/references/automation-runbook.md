@@ -75,6 +75,23 @@ python3 ~/mineflow/skills/linkedin-auto-post/scripts/run_queue.py \
 
 `--dry-run` **không sửa CSV** và không gọi API — chạy bao nhiêu lần cũng an toàn.
 
+## 3b. Bộ triển khai sẵn — dùng cái này thay vì tự dựng
+
+`assets/ops-repo-template/` chứa đủ file cho một repo vận hành private:
+
+```text
+ops-repo-template/
+├── .github/workflows/linkedin-post.yml   # đăng bài, 12 lần/ngày trong khung giờ đăng
+├── .github/workflows/gws-renewal.yml     # nhắc gia hạn, mở issue khi có việc
+├── .gitignore
+└── README.md                             # hướng dẫn cài đặt 5 bước
+```
+
+Hoặc chạy trên máy cá nhân: `scripts/install_cron.sh ~/linkedin-ops` — cài cron,
+chạy lại nhiều lần được, không nhân bản dòng cron, và kiểm tra `.env` có đúng quyền 600 không.
+
+**Repo vận hành phải để private** — nó chứa nội dung chưa đăng và thông tin khách hàng.
+
 ## 4. Lên lịch bằng cron
 
 Chạy mỗi 15 phút; script tự bỏ qua bài chưa tới hạn.
@@ -138,6 +155,10 @@ Access token LinkedIn sống **60 ngày**.
 | Refresh token | 45 ngày/lần (đặt lịch nhắc) | Xem mục 2 trong `linkedin-api.md` |
 | Kiểm tra token còn sống | Hằng tuần | `curl -s -o /dev/null -w "%{http_code}" https://api.linkedin.com/v2/userinfo -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN"` → mong đợi `200` |
 | Xoay token khi nghi lộ | Ngay lập tức | Revoke trong LinkedIn Developer app, tạo lại |
+| **Xoay client secret khi lộ** | Ngay lập tức | Tab **Auth** của app → tạo secret mới. Secret cũ mất hiệu lực. Sau đó chạy lại `get_token.py` và cập nhật secret trên GitHub |
+
+**Client secret cũng là bí mật, ngang với token.** Ai có `client_id` + `client_secret`
+có thể dựng luồng OAuth mạo danh app của bạn. Đừng dán vào chat, tin nhắn, hay issue.
 
 **Không bao giờ commit token.** Kiểm tra trước mỗi lần push:
 ```bash

@@ -165,13 +165,15 @@ skills/linkedin-auto-post/
 │   └── automation-runbook.md    # schema CSV, cron, GitHub Actions, token, guardrail
 ├── scripts/
 │   ├── get_token.py             # lấy access token qua OAuth, ghi .env quyền 600
+│   ├── install_cron.sh          # cài lịch cron trên máy cá nhân
 │   ├── lint_posts.py            # kiểm tra bài trước khi đăng
 │   ├── make_image.py            # dựng ảnh 1200x1200 từ 5 mẫu visual (Chromium headless)
 │   ├── linkedin_post.py         # đăng 1 bài: text / 1 ảnh / nhiều ảnh
 │   ├── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả
 │   └── outreach_queue.py        # in việc outreach hôm nay, theo dõi pipeline
 └── assets/
-    ├── content-queue.example.csv # hàng đợi tuần 1, 3 bài đã viết sẵn ở status=draft
+    ├── ops-repo-template/       # workflow + hướng dẫn dựng repo vận hành private
+    ├── content-queue.example.csv # hàng đợi 4 tuần, 9 bài đã viết sẵn ở status=draft
     ├── weekly-input-brief.md
     ├── prospect-list.example.csv
     ├── messages/                # 5 mẫu tin nhắn outreach

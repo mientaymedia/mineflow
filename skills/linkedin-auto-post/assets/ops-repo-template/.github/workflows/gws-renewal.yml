@@ -1,0 +1,48 @@
+name: Nhắc gia hạn Google Workspace
+
+# 01:00 UTC = 08:00 giờ VN, mỗi ngày.
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write           # để mở issue khi có khách tới hạn
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Kiểm tra khách tới hạn
+        id: check
+        run: |
+          python3 skills/renewal_check.py --list renewal-tracker.csv > out.txt 2>&1 || true
+          cat out.txt
+          {
+            echo "### Gia hạn Google Workspace"
+            echo '```'
+            cat out.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # Chỉ mở issue khi thực sự có người cần chạm hôm nay
+          if grep -qE 'CẦN CHẠM HÔM NAY \(([1-9][0-9]*)\)|ĐÃ QUÁ HẠN' out.txt; then
+            echo "has_work=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_work=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Mở issue nhắc việc
+        if: steps.check.outputs.has_work == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Gia hạn Workspace — việc ngày $(date -u -d '+7 hours' +%Y-%m-%d)" \
+            --body-file out.txt \
+            --label renewal || true
