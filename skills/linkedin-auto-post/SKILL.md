@@ -16,7 +16,7 @@ Bối cảnh đã chốt với Henry (2026-09-03):
 - **Hai mảng sản phẩm độc lập**, ghi nhận doanh thu, chi phí, giờ và KPI riêng — không gộp:
   - **Google Workspace** — mảng riêng, cầu có sẵn, kênh là Search + danh sách gia hạn + giới thiệu. **Không nằm trong kế hoạch nội dung LinkedIn.** Xem skill riêng `gws-renewal`.
   - **MineFlow CDP + Zalo Business Solutions** — bán cho chủ shop bán sàn, cầu phải tạo. LinkedIn phục vụ mảng này. Tỉ lệ nội dung 60/40.
-- Khách hàng thật đang dùng MineFlow: **Hậu Tâm Official** (một khách).
+- Khách hàng thật đang dùng MineFlow: **một khách hàng** (chưa xin phép nêu tên).
 - **Mô hình vận hành:** AI viết nội dung, script đăng, Henry duyệt. Nhưng hai việc AI không chạm được vẫn là ràng buộc: **cung cấp nguyên liệu thật** (Weekly Input Brief) và **trả lời người thật** (comment, inbox, outreach). Xem `references/ai-operating-model.md`.
 
 Baseline API: LinkedIn Versioned API, `LinkedIn-Version: 202604`, kiểm tra ngày 2026-09-03.
@@ -30,6 +30,7 @@ Baseline API: LinkedIn Versioned API, `LinkedIn-Version: 202604`, kiểm tra ng�
 - **Không gộp hai mảng sản phẩm.** Doanh thu, chi phí, giờ Henry và KPI ghi nhận riêng. Không lấy số khách Workspace làm KPI tăng trưởng MineFlow.
 - **LinkedIn là kênh lạnh, chậm và tốn giờ Founder nhất.** Chạy song song với quan hệ sẵn có và giới thiệu, đừng chờ LinkedIn mới có pipeline.
 - Không bao giờ commit access token. Token đọc từ biến môi trường `LINKEDIN_ACCESS_TOKEN`.
+- **Không đưa tên khách hàng vào repo.** Repo skill này là public; tên khách chưa xin phép công bố chỉ nằm trong file vận hành riêng (`content-queue.csv`, `renewal-tracker.csv` — đều trong `.gitignore`).
 - **Chỉ tự động hoá việc đăng bài.** Connection request và tin nhắn do người thật bấm gửi — công cụ tự động gửi hàng loạt vi phạm điều khoản LinkedIn và thường bị khoá tài khoản vĩnh viễn.
 
 ## Quy trình chuẩn

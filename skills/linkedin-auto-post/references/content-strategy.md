@@ -2,7 +2,7 @@
 
 > Dữ kiện Henry xác nhận 2026-09-03:
 > - Kênh đăng: **profile cá nhân Henry**, không dùng Company Page.
-> - Khách hàng thật đang dùng: **Hậu Tâm Official** (một khách) — đây là case study duy nhất hiện có.
+> - Khách hàng thật đang dùng: **một khách hàng** (chưa xin phép nêu tên) — đây là case study duy nhất hiện có.
 > - Ba dòng sản phẩm chủ lực: **MineFlow CDP**, **Google Workspace**, **Zalo Business Solutions**.
 
 ## 0. Phạm vi — tài liệu này chỉ phục vụ MineFlow và Zalo Business Solutions
@@ -78,7 +78,7 @@ Tối đa 1 bài/tháng.
 | 1 | **Problem Education** | Làm ICP nhận ra họ đang mất tiền | 30% | Text + 1 ảnh số liệu |
 | 2 | **Proof** | Chứng minh giải quyết được | 20% | Case study, before/after |
 
-> **Ràng buộc thật:** hiện chỉ có **một** khách hàng đang dùng — Hậu Tâm Official.
+> **Ràng buộc thật:** hiện chỉ có **một** khách hàng đang dùng — khách hàng đầu tiên.
 > Một case study không đủ nuôi 20% nội dung trong 3 tháng. Xem mục 10 để biết cách lấp khoảng trống này.
 | 3 | **How-to / Teardown** | Cho đi kiến thức triển khai | 25% | Checklist, screenshot sản phẩm |
 | 4 | **Founder POV** | Tạo lý do tin vào người bán | 15% | Bài kể chuyện, quan điểm trái chiều |
@@ -221,7 +221,7 @@ vấn đề nằm ở ICP hoặc offer, không phải ở nội dung. Dừng vi�
 | ICP không hoạt động trên LinkedIn (chủ shop VN dùng Facebook/Zalo nhiều hơn) | **Cao** | Kiểm chứng trước: tìm 30 người đúng ICP trên LinkedIn. Không đủ 30 → đổi kênh, đừng đổ công vào LinkedIn |
 | Kéo Google Workspace vào nội dung LinkedIn | **Cao** | Mảng riêng, cầu có sẵn, kênh đúng là Search. Bám tỉ lệ 60/40 ở mục 2 và ngoại lệ 1 bài/tháng |
 | Chạy LinkedIn lạnh trước khi khai thác hết quan hệ sẵn có | **Cao** | Khách cũ, người giới thiệu và cộng đồng ngành rẻ hơn LinkedIn lạnh nhiều lần. Chạy song song, đừng chờ LinkedIn |
-| Chỉ có 1 case study → Pillar 2 cạn sau 4 bài | Cao | Xem mục 10: xin phép Hậu Tâm Official, và dùng chính MineFlow làm case nội bộ |
+| Chỉ có 1 case study → Pillar 2 cạn sau 4 bài | Cao | Xem mục 10: xin phép khách hàng đầu tiên, và dùng chính MineFlow làm case nội bộ |
 | Duyệt hời hợt biến thành đóng dấu tự động | **Cao** | Checklist 60 giây ở ai-operating-model.md mục 3. Trượt 1 mục là trả lại AI viết lại |
 | Sản xuất rẻ nên tăng tần suất bài khi chưa có dữ liệu | Cao | Giữ 3 bài/tuần trong 4 tuần đầu. Xem ai-operating-model.md mục 5 |
 | Thành công tạo thêm giờ Henry mà không lường trước | Trung bình | Mỗi buổi dựng thử ~100 phút. Đặt trần số buổi nhận mỗi tuần |
@@ -234,16 +234,16 @@ Nếu dòng tiền đang căng, ưu tiên outbound trực tiếp tới 50 khách
 
 ## 10. Lấp khoảng trống Proof khi mới có 1 khách hàng
 
-Chỉ có Hậu Tâm Official đang dùng. Bốn nguồn bằng chứng thay thế, xếp theo độ tin cậy:
+Chỉ có khách hàng đầu tiên đang dùng. Bốn nguồn bằng chứng thay thế, xếp theo độ tin cậy:
 
 | # | Nguồn | Cần gì | Số bài khai thác được |
 |---|---|---|---:|
-| 1 | **Case study Hậu Tâm Official** | Xin phép bằng văn bản; chốt 3 chỉ số trước/sau; nếu không được nêu tên thì viết ẩn danh ("một thương hiệu TPCN") | 3–4 |
+| 1 | **Case study khách hàng đầu tiên** | Xin phép bằng văn bản; chốt 3 chỉ số trước/sau; nếu không được nêu tên thì viết ẩn danh ("một thương hiệu TPCN") | 3–4 |
 | 2 | **Case nội bộ MienTay Media** | Dùng chính MineFlow cho hoạt động của mình, công khai số liệu thật | 4–6 |
 | 3 | **Teardown công khai** | Mổ xẻ luồng CSKH/ZNS của một thương hiệu bất kỳ từ góc nhìn khách hàng — **chỉ khen hoặc phân tích khách quan, không bêu tên để chê** | 4–6 |
 | 4 | **Kết quả của chính quá trình bán** | Build in public: pipeline, số cuộc gọi, deal mất và lý do | 4+ |
 
-**Việc cần làm ngay:** hỏi Hậu Tâm Official 3 câu —
+**Việc cần làm ngay:** hỏi khách hàng đầu tiên 3 câu —
 (a) cho phép nêu tên hay ẩn danh;
 (b) ba chỉ số trước/sau được phép công bố;
 (c) một câu nhận xét để trích dẫn.
@@ -256,7 +256,7 @@ Trong phạm vi tài liệu này (MineFlow + Zalo), cần bảng sau cho **3 th�
 
 | Dòng sản phẩm | Doanh thu thực thu | Gross profit | Số giờ Henry/tuần | Số khách đang trả tiền | Định kỳ? |
 |---|---:|---:|---:|---:|---|
-| MineFlow CDP | | | | 1 (Hậu Tâm) | |
+| MineFlow CDP | | | | 1 | |
 | Zalo Business Solutions | | | | | |
 
 Dữ liệu mảng Google Workspace ghi ở [skills/gws-renewal](../../gws-renewal/) mục 12 — **bảng riêng, không cộng vào bảng trên**.
