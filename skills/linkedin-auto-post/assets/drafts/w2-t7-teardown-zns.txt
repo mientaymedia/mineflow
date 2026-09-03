@@ -1,0 +1,25 @@
+Tôi mổ xẻ một tin ZNS mình nhận được tuần trước. Từ góc nhìn người mua hàng, không phải người bán.
+
+Cái chạy được:
+
+✔ Gửi đúng lúc — ba ngày sau khi tôi mua, đúng lúc sản phẩm vừa về tay
+✔ Gọi đúng tên và nhắc đúng món tôi đã mua
+✔ Có một việc rõ ràng để làm, không phải một rừng lựa chọn
+
+Cái hỏng:
+
+✘ Nội dung viết như thông báo hệ thống, không như con người
+✘ Không có lý do nào để tôi trả lời — chỉ là thông tin một chiều
+✘ Ưu đãi kèm theo áp dụng cho tất cả mọi người, nên nó không phải ưu đãi, chỉ là giá mới
+
+Nếu là tôi, sửa một thứ duy nhất: thay câu thông báo bằng một câu hỏi.
+
+"Anh/chị đã dùng thử chưa ạ? Có gì chưa vừa ý cứ nhắn em."
+
+Chi phí tin nhắn không đổi. Nhưng một bên kết thúc cuộc trò chuyện, một bên bắt đầu nó.
+
+Phần lớn chiến dịch ZNS thất bại không phải vì gửi sai người. Vì viết như hệ thống nói với người dùng, thay vì người nói với người.
+
+Tin nhắn gần nhất bạn gửi cho khách — nó mở ra cuộc trò chuyện hay đóng lại?
+
+#ZaloOA #ZNS #CSKH

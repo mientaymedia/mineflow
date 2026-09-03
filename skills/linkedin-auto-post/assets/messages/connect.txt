@@ -1,0 +1,1 @@
+Chào {ten}, mình theo dõi mảng bán hàng đa kênh của các thương hiệu Việt. Thấy {shop} đang bán trên {san} nên muốn kết nối để học hỏi thêm cách anh/chị vận hành. Cảm ơn anh/chị.

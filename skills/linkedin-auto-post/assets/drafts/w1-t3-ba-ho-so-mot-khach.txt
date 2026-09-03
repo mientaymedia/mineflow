@@ -1,0 +1,23 @@
+Khách mua ở cửa hàng. Cũng khách đó mua trên Shopee. Cũng khách đó nhắn tin qua Zalo.
+
+Trong hệ thống của bạn, đó là ba người khác nhau.
+
+Không phải vì ai làm sai. Vì mỗi kênh sinh ra một bản ghi riêng, và không có chỗ nào nối chúng lại:
+
+→ POS lưu số điện thoại, không lưu khách đã xem gì
+→ Sàn giữ khách, trả về cho bạn một mã đơn và một cái tên viết tắt
+→ Zalo OA có follower, nhưng không biết ai trong đó từng mua
+→ File Excel của marketing cập nhật lần cuối cách đây mấy tháng
+
+Hệ quả không nằm ở chỗ dữ liệu lộn xộn. Ai cũng chịu được lộn xộn. Nó nằm ở chỗ này:
+
+Khi bạn chạy quảng cáo tháng sau, bạn không loại được người đã mua ra khỏi tệp nhắm mục tiêu.
+Nên bạn trả tiền để mua lại chính khách hàng cũ của mình.
+
+Và khi muốn gửi một tin nhắn chăm sóc, bạn không biết gửi cho ai, vì không có danh sách nào đáng tin.
+
+Bạn không có vấn đề về quảng cáo. Bạn có vấn đề về dữ liệu.
+
+Thương hiệu của bạn đang lưu thông tin khách ở mấy nơi? Đếm thử.
+
+#CDP #TMDT #ZaloOA

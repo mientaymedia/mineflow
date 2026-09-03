@@ -1,0 +1,12 @@
+[[ BÀI NÀY CHƯA VIẾT ĐƯỢC — CHỜ WEEKLY INPUT BRIEF ]]
+
+Pillar 4 (Founder POV). Cần nguyên liệu thật từ Henry, không thay thế được:
+
+  - Một quyết định sai và cái giá phải trả (câu 4 trong brief)
+  - Hoặc một lời từ chối của khách và lý do họ nêu (câu 6)
+  - Hoặc điều Henry thấy sai trên thị trường (câu 5)
+
+Điền assets/weekly-input-brief.md rồi AI viết theo template T6.
+
+Bài POV không có chuyện thật thì chỉ là quan điểm chung chung — loại bài
+không ai phản hồi và không tạo được lý do để tin người bán.

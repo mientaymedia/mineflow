@@ -1,0 +1,25 @@
+Bảy việc cần làm xong trước khi bấm gửi chiến dịch ZNS đầu tiên.
+
+Mỗi bước bỏ qua là một khoản phí tin nhắn đốt không kết quả.
+
+1. Chốt một nhóm khách duy nhất. Không gửi cho cả danh sách. Nhóm càng hẹp, nội dung càng viết được cụ thể.
+
+2. Viết ra điều bạn muốn họ làm sau khi đọc. Một hành động. Nếu không viết ra được, chưa nên gửi.
+
+3. Kiểm tra ai đã follow OA. Người đã follow thì nhắn miễn phí, không cần tốn phí ZNS.
+
+4. Viết nội dung như người nói với người. Đọc to lên. Nghe như thông báo hệ thống thì viết lại.
+
+5. Chuẩn bị sẵn người trực. Gửi xong mà không ai trả lời là mất khách đúng lúc họ quan tâm nhất.
+
+6. Chọn nhóm đối chứng. Giữ lại 10 phần trăm không gửi. Không có nhóm này thì không biết tin nhắn có tác dụng hay khách vốn dĩ sẽ mua.
+
+7. Chốt cách đo trước khi gửi. Doanh thu từ đúng nhóm đó, trong 14 ngày, so với nhóm đối chứng.
+
+Bước hay bị bỏ nhất là số 6. Nó khiến bạn phải chấp nhận một khả năng khó chịu: chiến dịch có thể không tạo ra gì cả.
+
+Nhưng không có nhóm đối chứng thì mọi con số bạn báo cáo đều là con số bạn tự an ủi mình.
+
+Lưu lại trước chiến dịch tiếp theo.
+
+#ZNS #ZaloOA #CSKH
