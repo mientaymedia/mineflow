@@ -27,8 +27,8 @@ Nếu gặp lỗi `426 Upgrade Required`, đổi sang version mới hơn.
 Chạy **trên máy cá nhân** (script cần mở được trình duyệt để đăng nhập LinkedIn):
 
 ```bash
-python3 scripts/get_token.py \
-  --client-id XXX --client-secret YYY --env-file .env
+python3 scripts/get_token.py --client-id XXX --env-file .env
+# Script hỏi Client Secret kín — không hiện chữ, không vào lịch sử shell
 ```
 
 Script tự làm hết: mở trình duyệt, dựng server hứng callback, kiểm tra `state` chống CSRF,
@@ -39,6 +39,13 @@ Token **không in ra màn hình** để tránh lọt vào lịch sử terminal.
 
 > **Không chạy script này trên máy chủ dùng chung hoặc trong session Claude Code.**
 > Nó tạo ra thông tin đăng nhập cho phép đăng bài dưới danh nghĩa của bạn.
+
+> **Vì sao Client Secret không nhận qua tham số dòng lệnh:** trên Linux, argv của
+> mọi tiến trình đang chạy đọc được bởi mọi tài khoản trên máy (`/proc/<pid>/cmdline`,
+> `ps -efww`). Luồng OAuth đứng chờ người dùng bấm Allow tới 300 giây, nên secret sẽ
+> phơi ra hàng phút. Script hỏi kín, hoặc đọc từ `LINKEDIN_CLIENT_SECRET`
+> (`/proc/<pid>/environ` chỉ chính user đọc được). Cùng lý do đó, `setup.sh` gửi
+> access token cho `curl` qua `--config -` thay vì `-H`.
 
 ### Cách thủ công — khi muốn hiểu từng bước
 

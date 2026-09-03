@@ -59,7 +59,7 @@ là nguồn prospect chất lượng nhất cho danh sách outreach.
 
 ```bash
 # Lấy token một lần (chạy trên máy cá nhân, tự mở trình duyệt)
-python3 scripts/get_token.py --client-id XXX --client-secret YYY --env-file .env
+python3 scripts/get_token.py --client-id XXX --env-file .env
 set -a && source .env && set +a
 
 # Dựng ảnh cho bài

@@ -12,16 +12,23 @@ Chuẩn bị (một lần, tại developer.linkedin.com):
   3. Tab Auth -> Authorized redirect URLs -> thêm: http://localhost:8000/callback
 
 Chạy:
-  python3 get_token.py --client-id XXX --client-secret YYY --env-file .env
+  python3 get_token.py --client-id XXX --env-file .env
+  # Script hỏi Client Secret kín (không hiện chữ, không vào lịch sử shell)
 
-  hoặc đặt sẵn biến môi trường LINKEDIN_CLIENT_ID / LINKEDIN_CLIENT_SECRET
-  rồi chỉ cần: python3 get_token.py --env-file .env
+  hoặc đặt sẵn biến môi trường rồi chạy không cần hỏi:
+  LINKEDIN_CLIENT_ID=XXX LINKEDIN_CLIENT_SECRET=YYY python3 get_token.py --env-file .env
+
+Client Secret CỐ Ý không nhận qua tham số dòng lệnh: argv của tiến trình đang chạy
+đọc được bởi mọi tài khoản trên máy (/proc/<pid>/cmdline), và luồng OAuth đứng chờ
+người dùng bấm Allow tới 300 giây.
 
 CẢNH BÁO: file .env chứa token đăng bài dưới danh nghĩa của bạn.
 Không commit, không dán vào chat, không gửi qua tin nhắn.
 """
 
 import argparse
+import getpass
+import html
 import http.server
 import json
 import os
@@ -59,6 +66,7 @@ class Result:
     def __init__(self):
         self.code = None
         self.error = None
+        self.detail = ""   # chi tiết chỉ in ra terminal, không đưa vào HTML
         self.done = threading.Event()
 
 
@@ -68,10 +76,16 @@ def make_handler(expected_state, result):
             pass  # không in log HTTP ra màn hình
 
         def _respond(self, status, cls, title, body):
-            page = PAGE.format(cls=cls, title=title, body=body).encode("utf-8")
+            # Escape mọi thứ: body có thể chứa text do LinkedIn (hoặc kẻ tấn công
+            # gọi thẳng vào localhost) đưa vào qua query string.
+            page = PAGE.format(cls=cls, title=html.escape(title),
+                               body=html.escape(body)).encode("utf-8")
             self.send_response(status)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(page)))
+            self.send_header("Content-Security-Policy", "default-src 'none'; style-src 'unsafe-inline'")
+            self.send_header("X-Frame-Options", "DENY")
+            self.send_header("X-Content-Type-Options", "nosniff")
             self.end_headers()
             self.wfile.write(page)
 
@@ -88,7 +102,9 @@ def make_handler(expected_state, result):
             err = (params.get("error_description") or params.get("error") or [""])[0]
 
             if err:
-                result.error = "LinkedIn từ chối: " + err
+                # Chi tiết của LinkedIn chỉ in ra terminal, không dội lại trang web
+                result.error = "LinkedIn từ chối yêu cầu uỷ quyền."
+                result.detail = err
             elif not secrets.compare_digest(state, expected_state):
                 # state sai => request không phải do script này khởi tạo
                 result.error = "State không khớp — huỷ để phòng CSRF."
@@ -153,11 +169,20 @@ def write_env(path, token, urn, refresh_token):
 
 def run(args):
     client_id = args.client_id or os.environ.get("LINKEDIN_CLIENT_ID", "")
-    client_secret = args.client_secret or os.environ.get("LINKEDIN_CLIENT_SECRET", "")
-    if not client_id or not client_secret:
-        print("LỖI: thiếu client id hoặc client secret.\n"
-              "Dùng --client-id/--client-secret, hoặc đặt LINKEDIN_CLIENT_ID "
-              "và LINKEDIN_CLIENT_SECRET.", file=sys.stderr)
+    if not client_id:
+        print("LỖI: thiếu Client ID. Dùng --client-id hoặc đặt LINKEDIN_CLIENT_ID.",
+              file=sys.stderr)
+        return 1
+
+    client_secret = os.environ.get("LINKEDIN_CLIENT_SECRET", "")
+    if not client_secret:
+        if not sys.stdin.isatty():
+            print("LỖI: thiếu Client Secret. Đặt biến môi trường LINKEDIN_CLIENT_SECRET.",
+                  file=sys.stderr)
+            return 1
+        client_secret = getpass.getpass("Client Secret (gõ xong bấm Enter, chữ không hiện): ")
+    if not client_secret:
+        print("LỖI: Client Secret rỗng.", file=sys.stderr)
         return 1
 
     redirect_uri = "http://{}:{}{}".format(args.host, args.port, CALLBACK_PATH)
@@ -206,6 +231,8 @@ def run(args):
 
     if result.error:
         print("LỖI: " + result.error, file=sys.stderr)
+        if result.detail:
+            print("       LinkedIn báo: " + result.detail, file=sys.stderr)
         return 1
 
     print("Đang đổi mã lấy token...")
@@ -271,7 +298,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(
         description="Lấy LinkedIn access token bằng OAuth 3-legged (chạy trên máy cá nhân).")
     parser.add_argument("--client-id", help="Client ID của app (hoặc LINKEDIN_CLIENT_ID)")
-    parser.add_argument("--client-secret", help="Client Secret (hoặc LINKEDIN_CLIENT_SECRET)")
+    # Cố ý KHÔNG có --client-secret: argv của tiến trình đang chạy là world-readable
+    # trên Linux (/proc/<pid>/cmdline), và luồng OAuth đứng chờ tới 300 giây.
+    # Secret đọc từ biến môi trường, hoặc hỏi kín ngay tại đây.
     parser.add_argument("--env-file", help="Ghi token ra file này với quyền 600, vd .env")
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--port", type=int, default=DEFAULT_PORT)

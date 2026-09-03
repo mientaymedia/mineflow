@@ -77,8 +77,7 @@ Sau đó **sửa `renewal-tracker.csv`** thành danh sách khách Workspace th�
 ### 3. Lấy token và nạp vào GitHub Secrets
 
 ```bash
-python3 skills/get_token.py \
-  --client-id XXX --client-secret YYY --env-file .env
+python3 skills/get_token.py --client-id XXX --env-file .env
 cat .env      # xem hai giá trị cần copy
 ```
 

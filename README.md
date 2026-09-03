@@ -134,8 +134,7 @@ Ba lớp:
 
 ```bash
 # Lấy token một lần (trên máy cá nhân)
-python3 skills/linkedin-auto-post/scripts/get_token.py \
-  --client-id XXX --client-secret YYY --env-file .env
+python3 skills/linkedin-auto-post/scripts/get_token.py --client-id XXX --env-file .env
 set -a && source .env && set +a
 
 # Xem trước payload, không gọi API

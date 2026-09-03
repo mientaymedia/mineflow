@@ -32,9 +32,12 @@ step "2/5  Lấy LinkedIn access token"
 if [[ -f .env ]] && grep -q '^LINKEDIN_ACCESS_TOKEN=.\+' .env; then
   c_ok ".env đã có token"
   set -a; . ./.env; set +a
-  CODE="$(curl -s --max-time 15 -o /dev/null -w '%{http_code}' \
-    -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
-    https://api.linkedin.com/v2/userinfo 2>/dev/null || true)"
+  # Token đi qua stdin (--config -), KHÔNG qua argv: /proc/<pid>/cmdline là
+  # world-readable nên "-H Authorization: Bearer ..." lộ token cho mọi user trên máy.
+  # printf là builtin của bash nên bản thân nó cũng không tạo tiến trình mới.
+  CODE="$(printf 'header = "Authorization: Bearer %s"\nurl = "https://api.linkedin.com/v2/userinfo"\n' \
+    "$LINKEDIN_ACCESS_TOKEN" \
+    | curl -s --max-time 15 -o /dev/null -w '%{http_code}' --config - 2>/dev/null || true)"
   CODE="${CODE:-000}"
   case "$CODE" in
     200) c_ok "token còn hiệu lực" ;;
@@ -49,7 +52,10 @@ if [[ ! -f .env ]]; then
   read -r -s -p "  Client Secret (gõ xong bấm Enter, chữ sẽ không hiện): " CSEC; echo
   [[ -n "$CID" && -n "$CSEC" ]] || { c_err "Thiếu Client ID hoặc Secret."; exit 1; }
   echo "  Trình duyệt sẽ mở ra. Đăng nhập LinkedIn và bấm Allow."
-  "$PY" skills/get_token.py --client-id "$CID" --client-secret "$CSEC" --env-file .env \
+  # Secret truyền qua biến môi trường, không qua argv (xem chú thích ở trên).
+  # /proc/<pid>/environ chỉ đọc được bởi chính user, khác với cmdline.
+  LINKEDIN_CLIENT_ID="$CID" LINKEDIN_CLIENT_SECRET="$CSEC" \
+    "$PY" skills/get_token.py --env-file .env \
     || { c_err "Lấy token thất bại. Kiểm tra redirect URL http://localhost:8000/callback trong tab Auth."; exit 1; }
   unset CSEC
   c_ok "đã ghi .env (quyền 600)"
