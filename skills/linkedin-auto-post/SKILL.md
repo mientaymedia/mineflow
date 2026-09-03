@@ -33,7 +33,7 @@ Baseline API: LinkedIn Versioned API, `LinkedIn-Version: 202604`, kiểm tra ng�
 ## Quy trình chuẩn
 
 ```
-Chọn ICP + bậc thang offer  →  references/content-strategy.md
+Chọn ICP + offer (MineFlow / Zalo)  →  references/content-strategy.md
       ↓
         ┌──────────────────────────┬──────────────────────────────┐
         │  LUỒNG NỘI DUNG          │  LUỒNG OUTREACH              │
