@@ -3,3 +3,7 @@ __pycache__/
 .idea/
 .vscode/
 
+# LinkedIn ops - không commit token hoặc dữ liệu vận hành
+.env
+content-queue.csv
+run.log

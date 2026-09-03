@@ -1,0 +1,18 @@
+Một chuỗi 12 cửa hàng có 41.000 khách trong hệ thống POS.
+Họ remarketing được đúng 0 người.
+
+Không phải vì không muốn. Vì dữ liệu nằm ở 4 nơi khác nhau.
+
+Chuyện thực sự xảy ra:
+→ POS lưu số điện thoại, không lưu hành vi mua
+→ Shopee giữ khách, không trả dữ liệu về
+→ Zalo OA có 8.000 follower, không biết ai từng mua gì
+→ File Excel của marketing cập nhật lần cuối tháng 3
+
+Kết quả: mỗi tháng chi tiền quảng cáo để mua lại chính khách hàng cũ của mình.
+
+Bạn không có vấn đề về quảng cáo. Bạn có vấn đề về dữ liệu.
+
+Chuỗi của bạn đang lưu dữ liệu khách ở mấy nơi?
+
+#CDP #BanLe #ZaloOA
