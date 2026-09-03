@@ -159,6 +159,42 @@ jobs:
 Lưu ý: cron của GitHub Actions tính theo **UTC** và có thể trễ vài phút vào giờ cao điểm.
 Đừng phụ thuộc vào độ chính xác đến từng phút.
 
+## 5b. Vì sao không chạy được từ session Claude Code trên web
+
+Môi trường Claude Code chạy trên cloud có **network policy** riêng, và mặc định nó
+**chặn kết nối tới LinkedIn**:
+
+```
+api.linkedin.com:443  -> 403 policy denial
+www.linkedin.com:443  -> 403 policy denial
+```
+
+Kiểm tra trạng thái proxy của môi trường:
+
+```bash
+curl -sS "$HTTPS_PROXY/__agentproxy/status"
+```
+
+Phần `recentRelayFailures` sẽ hiện đúng host bị từ chối.
+
+Hệ quả: kể cả khi đã có token, một session remote vẫn không gọi được LinkedIn API.
+Hai điều kiện phải có đủ:
+
+| Điều kiện | Cách mở |
+|---|---|
+| `api.linkedin.com` và `www.linkedin.com` trong allowlist | Sửa network policy của environment — xem [tài liệu Claude Code on the web](https://code.claude.com/docs/en/claude-code-on-the-web) |
+| `LINKEDIN_ACCESS_TOKEN` + `LINKEDIN_AUTHOR_URN` | Đặt trong environment variables của environment |
+
+**Bước không mở được bằng cấu hình:** lấy token lần đầu. OAuth 3-legged bắt buộc chủ
+tài khoản đăng nhập và bấm Allow trên trình duyệt của chính mình — nếu bên thứ ba lấy
+được token mà không cần bước đó thì đó mới là lỗ hổng. Làm một lần, 2 phút, dùng 60 ngày.
+
+**Đánh đổi khi đặt token vào environment variables:** mọi session Claude Code sau đó
+đều đăng bài được dưới danh nghĩa chủ tài khoản, kể cả session mà chủ tài khoản không
+theo dõi. Giới hạn thiệt hại: scope `w_member_social` chỉ cho đăng bài — không đọc tin
+nhắn, không xoá bài, không sửa profile. Nếu không muốn đánh đổi đó, chạy `post-now.sh`
+trên máy cá nhân mỗi lần; mất khoảng 30 giây.
+
 ## 6. Quản lý token — việc bảo trì duy nhất
 
 Access token LinkedIn sống **60 ngày**.
