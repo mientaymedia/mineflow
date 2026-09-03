@@ -57,8 +57,9 @@ là nguồn prospect chất lượng nhất cho danh sách outreach.
 ## Quick Start
 
 ```bash
-export LINKEDIN_ACCESS_TOKEN="..."          # xem references/linkedin-api.md để lấy token
-export LINKEDIN_AUTHOR_URN="urn:li:person:xxxx"   # bỏ trống -> script tự lấy từ /v2/userinfo
+# Lấy token một lần (chạy trên máy cá nhân, tự mở trình duyệt)
+python3 scripts/get_token.py --client-id XXX --client-secret YYY --env-file .env
+set -a && source .env && set +a
 
 # Dựng ảnh cho bài
 python3 scripts/make_image.py --template quote --out img/w1.png \
@@ -104,6 +105,7 @@ python3 scripts/outreach_queue.py --list prospect-list.csv --done p001 p002
 - [automation-runbook.md](./references/automation-runbook.md) — schema hàng đợi CSV, cron, GitHub Actions, rate limit, guardrail, dashboard KPI
 
 ### Scripts
+- [get_token.py](./scripts/get_token.py) — lấy LinkedIn access token bằng OAuth, tự hứng callback và ghi `.env` quyền 600. **Chạy trên máy cá nhân**
 - [make_image.py](./scripts/make_image.py) — dựng ảnh 1200×1200 từ 5 mẫu visual, render bằng Chromium headless
 - [linkedin_post.py](./scripts/linkedin_post.py) — đăng 1 bài: text, 1 ảnh, hoặc nhiều ảnh
 - [run_queue.py](./scripts/run_queue.py) — đọc CSV, đăng bài tới hạn, ghi ngược kết quả

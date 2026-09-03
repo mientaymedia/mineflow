@@ -132,7 +132,10 @@ Ba lớp:
 - **Outreach** — chuỗi 5 chạm tới chủ shop bán sàn, tin nhắn điền sẵn, hạn mức an toàn, pipeline theo dõi trong CSV. Script soạn và nhắc việc; **người thật bấm gửi** — tự động gửi hàng loạt vi phạm điều khoản LinkedIn.
 
 ```bash
-export LINKEDIN_ACCESS_TOKEN="..."
+# Lấy token một lần (trên máy cá nhân)
+python3 skills/linkedin-auto-post/scripts/get_token.py \
+  --client-id XXX --client-secret YYY --env-file .env
+set -a && source .env && set +a
 
 # Xem trước payload, không gọi API
 python3 skills/linkedin-auto-post/scripts/linkedin_post.py \
@@ -161,6 +164,7 @@ skills/linkedin-auto-post/
 │   ├── linkedin-api.md          # OAuth, author URN, Images API, Posts API, lỗi thường gặp
 │   └── automation-runbook.md    # schema CSV, cron, GitHub Actions, token, guardrail
 ├── scripts/
+│   ├── get_token.py             # lấy access token qua OAuth, ghi .env quyền 600
 │   ├── make_image.py            # dựng ảnh 1200x1200 từ 5 mẫu visual (Chromium headless)
 │   ├── linkedin_post.py         # đăng 1 bài: text / 1 ảnh / nhiều ảnh
 │   ├── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả

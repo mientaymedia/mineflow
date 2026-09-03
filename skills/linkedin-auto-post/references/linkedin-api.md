@@ -22,6 +22,26 @@ Nếu gặp lỗi `426 Upgrade Required`, đổi sang version mới hơn.
 
 ## 2. Lấy access token (3-legged OAuth)
 
+### Cách nhanh — dùng `scripts/get_token.py`
+
+Chạy **trên máy cá nhân** (script cần mở được trình duyệt để đăng nhập LinkedIn):
+
+```bash
+python3 scripts/get_token.py \
+  --client-id XXX --client-secret YYY --env-file .env
+```
+
+Script tự làm hết: mở trình duyệt, dựng server hứng callback, kiểm tra `state` chống CSRF,
+đổi code lấy token, gọi `/v2/userinfo` lấy luôn author URN, ghi `.env` với quyền `600`,
+và cảnh báo nếu thiếu scope `w_member_social`. Henry chỉ bấm **Allow** một lần.
+
+Token **không in ra màn hình** để tránh lọt vào lịch sử terminal.
+
+> **Không chạy script này trên máy chủ dùng chung hoặc trong session Claude Code.**
+> Nó tạo ra thông tin đăng nhập cho phép đăng bài dưới danh nghĩa của bạn.
+
+### Cách thủ công — khi muốn hiểu từng bước
+
 **Bước 1 — mở URL này trên trình duyệt, đăng nhập, đồng ý:**
 
 ```
