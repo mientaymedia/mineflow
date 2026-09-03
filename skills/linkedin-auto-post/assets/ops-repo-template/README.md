@@ -24,7 +24,25 @@ linkedin-ops/                  (private)
 └── renewal-tracker.csv        # danh sách gia hạn Workspace
 ```
 
-## Cài đặt — một lệnh
+## Đăng bài đầu tiên NGAY — một lệnh
+
+```bash
+./post-now.sh
+```
+
+Tự lấy token nếu chưa có, soát bài bằng lint, **hiện toàn bộ nội dung ra màn hình**,
+hỏi xác nhận, rồi mới đăng. Không chờ lịch, không cần cron.
+Đăng xong tự ghi `posted` và URN vào hàng đợi.
+
+```bash
+./post-now.sh w1-t5     # chỉ định bài cụ thể
+```
+
+Bài còn placeholder bị chặn, không đăng được.
+
+---
+
+## Cài lịch tự động — một lệnh
 
 ```bash
 ./setup.sh

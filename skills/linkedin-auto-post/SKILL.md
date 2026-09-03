@@ -75,6 +75,9 @@ python3 scripts/linkedin_post.py \
 
 # Bỏ --dry-run để đăng thật
 
+# Đăng ngay một bài, có xác nhận trước khi gửi (gói vận hành)
+./post-now.sh
+
 # Chạy hàng đợi (chỉ đăng bài đã tới hạn, status=ready)
 python3 scripts/run_queue.py --queue content-queue.csv
 

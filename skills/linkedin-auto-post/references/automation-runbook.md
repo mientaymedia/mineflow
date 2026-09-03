@@ -83,6 +83,7 @@ python3 ~/mineflow/skills/linkedin-auto-post/scripts/run_queue.py \
 ops-repo-template/
 ├── .github/workflows/linkedin-post.yml   # đăng bài, 12 lần/ngày trong khung giờ đăng
 ├── .github/workflows/gws-renewal.yml     # nhắc gia hạn, mở issue khi có việc
+├── post-now.sh                           # đăng NGAY một bài, có xem trước và xác nhận
 ├── setup.sh                              # cài toàn bộ bằng một lệnh, không cần GitHub
 ├── approve.sh                            # mở khoá bài đã duyệt: draft -> ready
 ├── .gitignore
