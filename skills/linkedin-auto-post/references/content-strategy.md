@@ -149,6 +149,7 @@ Quy tắc hình thức:
 - Xuống dòng nhiều. Đoạn tối đa 2 dòng trên mobile.
 - Tối đa **3 hashtag**, đặt cuối bài.
 - **Link ngoài đặt ở comment đầu tiên**, không đặt trong body — LinkedIn giảm reach bài có link ngoài.
+- **Link đăng ký chính thức là <https://mineflow.vn/>** — trang đã có sẵn form. Không dựng landing page mới cho từng chiến dịch; một trang được tối ưu liên tục thắng nhiều trang bỏ bê.
 - Không dùng emoji quá 3 cái. Không dùng emoji làm bullet cho nội dung B2B nghiêm túc.
 
 ## 6. Lịch 30 ngày — 3 bài/tuần

@@ -277,7 +277,7 @@ Nhắn "{TỪ KHOÁ}" qua tin nhắn nếu muốn xem chi tiết.
 - [ ] Toàn bài 900–1.500 ký tự
 - [ ] Mọi con số đều có nguồn hoặc được ghi là giả định
 - [ ] Đúng 1 CTA, đặt cuối bài
-- [ ] Link ngoài để ở comment, không ở body
+- [ ] Link ngoài để ở comment, không ở body — link đăng ký là <https://mineflow.vn/>
 - [ ] Tối đa 3 hashtag
 - [ ] Có ảnh kèm alt text mô tả thật
 - [ ] Đọc to trong 20 giây không thấy gượng
