@@ -152,6 +152,7 @@ python3 skills/linkedin-auto-post/scripts/outreach_queue.py --list prospect-list
 skills/linkedin-auto-post/
 ├── SKILL.md
 ├── references/
+│   ├── ai-operating-model.md    # phân vai AI/Henry, input brief, checklist duyệt, thời gian thật
 │   ├── content-strategy.md      # ICP, pillar, hook bank, lịch 30 ngày, KPI, rủi ro
 │   ├── google-workspace-line.md # mảng sản phẩm riêng: ICP, kênh, gia hạn, KPI, ranh giới
 │   ├── post-templates.md        # 12 template bài viết tiếng Việt

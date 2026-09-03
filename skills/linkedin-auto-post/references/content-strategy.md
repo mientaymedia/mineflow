@@ -167,17 +167,31 @@ Giờ đăng cho ICP Việt Nam: **08:00–09:00** hoặc **20:00–21:00** (gi�
 
 ## 7. Vòng lặp vận hành hằng tuần
 
-| Việc | Người/công cụ | Thời gian | Khi nào |
-|---|---|---|---|
-| Viết 3 bài + duyệt | Henry (AI hỗ trợ nháp) | 60 phút | Chủ nhật |
-| Làm 3 ảnh | AI/Canva theo template | 30 phút | Chủ nhật |
-| Nạp hàng đợi CSV | Henry | 10 phút | Chủ nhật |
-| Đăng | `run_queue.py` (cron) | 0 phút | Tự động |
-| Trả lời comment trong 2h đầu | Henry | 20 phút/bài | Ngày đăng |
-| Gửi connection request cho người tương tác | Henry | 20 phút | Thứ 6 |
-| Chốt số KPI | Henry | 15 phút | Thứ 6 |
+AI viết và script đăng. Henry cung cấp nguyên liệu, duyệt, và làm phần quan hệ.
+Phân vai đầy đủ ở [ai-operating-model.md](./ai-operating-model.md).
 
-Tổng: **~4 giờ/tuần**. Nếu vượt quá 6 giờ/tuần mà chưa có discovery call nào sau 6 tuần, dừng kênh này.
+| Việc | Ai làm | Thời gian Henry | Khi nào |
+|---|---|---:|---|
+| **Weekly Input Brief** (8 câu) | Henry | 15 ph | Chủ nhật |
+| Viết 3 bài từ brief | **AI** | 0 | Chủ nhật |
+| Duyệt 3 bài (checklist 60 giây) | Henry | 15 ph | Chủ nhật |
+| Làm ảnh theo template | **AI** | 0 | Chủ nhật |
+| Soát ảnh: số liệu, dấu tiếng Việt | Henry | 10 ph | Chủ nhật |
+| Đổi `status` sang `ready` | Henry | 2 ph | Chủ nhật |
+| Đăng đúng giờ | **script + cron** | 0 | Tự động |
+| Soạn tin nhắn outreach | **script** | 0 | Hằng ngày |
+| **Bấm gửi 15 connection request/ngày** | Henry | 100 ph | Hằng ngày |
+| **Trả lời comment 2h đầu + inbox** | Henry | 60 ph | Ngày đăng |
+| Chốt số KPI | Henry | 10 ph | Thứ 6 |
+
+Tổng: **~3,5 giờ/tuần**, trong đó **160 phút** nằm ở hai việc AI không làm được —
+bấm gửi outreach và trả lời người thật.
+
+> **Quy tắc cứng:** không có Weekly Input Brief → **không đăng bài tuần đó**.
+> Bài AI viết mà không có nguyên liệu thật sẽ chung chung, đốt reach và không tạo phản hồi.
+
+Con số này **tăng khi kênh chạy tốt**: mỗi buổi dựng thử tốn ~100 phút của Henry.
+Đạt mục tiêu tháng 3 (10 buổi/tháng) là thêm ~17 giờ/tháng. Biết trước để không nhận nhiều hơn khả năng làm tốt.
 
 ## 8. KPI — chỉ đo cái dẫn tới tiền
 
@@ -207,7 +221,9 @@ vấn đề nằm ở ICP hoặc offer, không phải ở nội dung. Dừng vi�
 | Kéo Google Workspace vào nội dung LinkedIn | **Cao** | Mảng riêng, cầu có sẵn, kênh đúng là Search. Bám tỉ lệ 60/40 ở mục 2 và ngoại lệ 1 bài/tháng |
 | Chạy LinkedIn lạnh trước khi khai thác hết quan hệ sẵn có | **Cao** | Khách cũ, người giới thiệu và cộng đồng ngành rẻ hơn LinkedIn lạnh nhiều lần. Chạy song song, đừng chờ LinkedIn |
 | Chỉ có 1 case study → Pillar 2 cạn sau 4 bài | Cao | Xem mục 10: xin phép Hậu Tâm Official, và dùng chính MineFlow làm case nội bộ |
-| Tốn thời gian Build thay vì Sell | Cao | Trần cứng 4 giờ/tuần. Vượt là dừng |
+| Duyệt hời hợt biến thành đóng dấu tự động | **Cao** | Checklist 60 giây ở ai-operating-model.md mục 3. Trượt 1 mục là trả lại AI viết lại |
+| Sản xuất rẻ nên tăng tần suất bài khi chưa có dữ liệu | Cao | Giữ 3 bài/tuần trong 4 tuần đầu. Xem ai-operating-model.md mục 5 |
+| Thành công tạo thêm giờ Henry mà không lường trước | Trung bình | Mỗi buổi dựng thử ~100 phút. Đặt trần số buổi nhận mỗi tuần |
 | Bài tự động đăng sai nội dung/sai giờ | Trung bình | `--dry-run` bắt buộc trước lần chạy đầu; queue có cột `status` duyệt tay |
 | Token hết hạn (60 ngày) | Trung bình | Đặt lịch nhắc refresh, xem automation-runbook.md |
 | Tài khoản bị hạn chế do đăng như bot | Thấp–TB | Tối đa 3 bài/tuần, không tự động comment, không tự động gửi connection request |

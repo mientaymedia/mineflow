@@ -17,6 +17,7 @@ Bối cảnh đã chốt với Henry (2026-09-03):
   - **Google Workspace** — mảng riêng, cầu có sẵn, kênh là Search + danh sách gia hạn + giới thiệu. **Không nằm trong kế hoạch nội dung LinkedIn.** Xem `references/google-workspace-line.md`.
   - **MineFlow CDP + Zalo Business Solutions** — bán cho chủ shop bán sàn, cầu phải tạo. LinkedIn phục vụ mảng này. Tỉ lệ nội dung 60/40.
 - Khách hàng thật đang dùng MineFlow: **Hậu Tâm Official** (một khách).
+- **Mô hình vận hành:** AI viết nội dung, script đăng, Henry duyệt. Nhưng hai việc AI không chạm được vẫn là ràng buộc: **cung cấp nguyên liệu thật** (Weekly Input Brief) và **trả lời người thật** (comment, inbox, outreach). Xem `references/ai-operating-model.md`.
 
 Baseline API: LinkedIn Versioned API, `LinkedIn-Version: 202604`, kiểm tra ngày 2026-09-03.
 
@@ -25,6 +26,7 @@ Baseline API: LinkedIn Versioned API, `LinkedIn-Version: 202604`, kiểm tra ng�
 - Mỗi bài phải phục vụ **một ICP**, **một vấn đề**, **một hành động tiếp theo**. Không đăng cho vui.
 - KPI chính là **profile view → connection request có phản hồi → discovery call**, không phải like/impression.
 - Không tự động hoá khi chưa có 10 bài viết tay đã kiểm chứng. Automation nhân bản kết quả, không tạo ra kết quả.
+- **Không có Weekly Input Brief thì không đăng tuần đó.** Bài AI viết không có nguyên liệu thật sẽ chung chung, đốt reach và không tạo phản hồi.
 - **Không gộp hai mảng sản phẩm.** Doanh thu, chi phí, giờ Henry và KPI ghi nhận riêng. Không lấy số khách Workspace làm KPI tăng trưởng MineFlow.
 - **LinkedIn là kênh lạnh, chậm và tốn giờ Founder nhất.** Chạy song song với quan hệ sẵn có và giới thiệu, đừng chờ LinkedIn mới có pipeline.
 - Không bao giờ commit access token. Token đọc từ biến môi trường `LINKEDIN_ACCESS_TOKEN`.
@@ -81,6 +83,9 @@ python3 scripts/outreach_queue.py --list prospect-list.csv --done p001 p002
 
 ### Mảng sản phẩm
 - [google-workspace-line.md](./references/google-workspace-line.md) — mảng Google Workspace độc lập: ICP renewal/migration, offer, kênh (không LinkedIn), quy trình gia hạn, KPI riêng, **ranh giới với MineFlow**
+
+### Vận hành
+- [ai-operating-model.md](./references/ai-operating-model.md) — phân vai AI / script / Henry, Weekly Input Brief 8 câu, checklist duyệt 60 giây, thời gian thật của Henry, tiêu thời gian tiết kiệm vào đâu
 
 ### Nội dung
 - [content-strategy.md](./references/content-strategy.md) — phạm vi MineFlow + Zalo, ICP, positioning, 5 content pillar, hook bank, lịch 30 ngày, KPI
