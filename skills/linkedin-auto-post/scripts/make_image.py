@@ -86,6 +86,14 @@ def t_big_number(f):
 
 
 def t_contrast(f):
+    """Hai cột Trước → Sau.
+
+    Màu cột phải mặc định là accent (nghĩa là 'tốt hơn'). Khi cột phải mang
+    nghĩa xấu — ví dụ teardown 'Chạy được / Hỏng' — truyền after_color=warn
+    để màu không nói ngược nội dung.
+    """
+    palette = {"accent": BRAND["accent"], "warn": BRAND["warn"], "muted": "#6B7A90"}
+
     def col(title, items, color):
         lis = "".join(
             '<li style="font-size:38px;line-height:1.45;margin-bottom:18px">{}</li>'.format(esc(i))
@@ -97,20 +105,23 @@ def t_contrast(f):
   <ul style="list-style:none">{l}</ul>
 </div>""".format(c=color, t=esc(title), l=lis)
 
+    after_color = palette.get(f.get("after_color", "accent"), BRAND["accent"])
+    before_color = palette.get(f.get("before_color", "muted"), "#6B7A90")
+
     return BRAND["light"], BRAND["on_light"], """
 <div class="brand">{brand}</div>
 <div class="stack">
   <div style="font-size:52px;font-weight:800;line-height:1.2;margin-bottom:16px">{title}</div>
   <div style="display:flex;gap:44px;align-items:flex-start">
     {before}
-    <div style="font-size:64px;color:{accent};font-weight:800;padding-top:52px">&rarr;</div>
+    <div style="font-size:64px;color:{accent};font-weight:800;align-self:center">&rarr;</div>
     {after}
   </div>
 </div>
 <div class="foot">{footer}</div>
 """.format(brand=esc(f.get("brand", "MineFlow")), title=esc(f.get("title", "")),
-           before=col(f.get("before_title", "Trước"), split_items(f.get("before_items")), "#6B7A90"),
-           after=col(f.get("after_title", "Sau"), split_items(f.get("after_items")), BRAND["accent"]),
+           before=col(f.get("before_title", "Trước"), split_items(f.get("before_items")), before_color),
+           after=col(f.get("after_title", "Sau"), split_items(f.get("after_items")), after_color),
            footer=esc(f.get("footer", "")), accent=BRAND["accent"])
 
 

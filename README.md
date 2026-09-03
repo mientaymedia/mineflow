@@ -5,6 +5,7 @@ Claude Code skills used to build and grow MineFlow.
 | Skill | Dùng khi |
 |---|---|
 | [`zalo-mini-app`](skills/zalo-mini-app/) | Xây Zalo Mini App: ZaUI, zmp-sdk, payment, Open API, eKYC, publish |
+| [`gws-renewal`](skills/gws-renewal/) | Vận hành mảng Google Workspace: nhịp gia hạn T-90 đến T+1, theo dõi seat, tỉ lệ gia hạn |
 | [`linkedin-auto-post`](skills/linkedin-auto-post/) | Nội dung LinkedIn quảng bá sản phẩm, đăng tự động bài kèm ảnh, và chuỗi outreach tới chủ shop bán sàn |
 
 ---
@@ -157,7 +158,6 @@ skills/linkedin-auto-post/
 ├── references/
 │   ├── ai-operating-model.md    # phân vai AI/Henry, input brief, checklist duyệt, thời gian thật
 │   ├── content-strategy.md      # ICP, pillar, hook bank, lịch 30 ngày, KPI, rủi ro
-│   ├── google-workspace-line.md # mảng sản phẩm riêng: ICP, kênh, gia hạn, KPI, ranh giới
 │   ├── post-templates.md        # 12 template bài viết tiếng Việt
 │   ├── image-playbook.md        # kích thước, 6 mẫu visual, bộ màu, alt text
 │   ├── outreach-playbook.md     # tệp chủ shop bán sàn, chuỗi 5 chạm, hạn mức, xử lý phản đối
@@ -165,6 +165,7 @@ skills/linkedin-auto-post/
 │   └── automation-runbook.md    # schema CSV, cron, GitHub Actions, token, guardrail
 ├── scripts/
 │   ├── get_token.py             # lấy access token qua OAuth, ghi .env quyền 600
+│   ├── lint_posts.py            # kiểm tra bài trước khi đăng
 │   ├── make_image.py            # dựng ảnh 1200x1200 từ 5 mẫu visual (Chromium headless)
 │   ├── linkedin_post.py         # đăng 1 bài: text / 1 ảnh / nhiều ảnh
 │   ├── run_queue.py             # đọc CSV, đăng bài tới hạn, ghi ngược kết quả
@@ -183,3 +184,32 @@ skills/linkedin-auto-post/
 - [LinkedIn Posts API](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api)
 - [LinkedIn Images API](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/images-api)
 - [LinkedIn Developer Portal](https://developer.linkedin.com/)
+
+---
+
+## gws-renewal
+
+Vận hành mảng Google Workspace như một **mảng sản phẩm độc lập** — doanh thu, chi phí, giờ và KPI ghi nhận riêng, không gộp vào mảng khác.
+
+Trọng tâm: **bảo vệ doanh thu gia hạn**. Đó là doanh thu chắc chắn nhất trong danh mục, và cũng là thứ dễ mất âm thầm nhất — khách không báo là sẽ rời, họ chỉ đơn giản không gia hạn.
+
+```bash
+# Ai tới hạn cần chạm hôm nay?
+python3 skills/gws-renewal/scripts/renewal_check.py --list renewal-tracker.csv
+
+# Toàn cảnh: ARR, số seat, tỉ lệ gia hạn, doanh thu cần bảo vệ trong 90 ngày
+python3 skills/gws-renewal/scripts/renewal_check.py --list renewal-tracker.csv --report
+```
+
+### Skill Structure
+
+```text
+skills/gws-renewal/
+├── SKILL.md
+├── references/
+│   └── product-line.md          # bản chất mảng, hai motion, ICP, offer, kênh, KPI, ranh giới
+├── scripts/
+│   └── renewal_check.py         # nhịp T-90/60/30/14/7/+1, cảnh báo mốc đã lỡ, báo cáo ARR
+└── assets/
+    └── renewal-tracker.example.csv
+```

@@ -14,7 +14,7 @@ Hệ thống ba lớp:
 Bối cảnh đã chốt với Henry (2026-09-03):
 - Kênh đăng: **profile cá nhân Henry** (không dùng Company Page → chỉ cần scope `w_member_social`).
 - **Hai mảng sản phẩm độc lập**, ghi nhận doanh thu, chi phí, giờ và KPI riêng — không gộp:
-  - **Google Workspace** — mảng riêng, cầu có sẵn, kênh là Search + danh sách gia hạn + giới thiệu. **Không nằm trong kế hoạch nội dung LinkedIn.** Xem `references/google-workspace-line.md`.
+  - **Google Workspace** — mảng riêng, cầu có sẵn, kênh là Search + danh sách gia hạn + giới thiệu. **Không nằm trong kế hoạch nội dung LinkedIn.** Xem skill riêng `gws-renewal`.
   - **MineFlow CDP + Zalo Business Solutions** — bán cho chủ shop bán sàn, cầu phải tạo. LinkedIn phục vụ mảng này. Tỉ lệ nội dung 60/40.
 - Khách hàng thật đang dùng MineFlow: **Hậu Tâm Official** (một khách).
 - **Mô hình vận hành:** AI viết nội dung, script đăng, Henry duyệt. Nhưng hai việc AI không chạm được vẫn là ràng buộc: **cung cấp nguyên liệu thật** (Weekly Input Brief) và **trả lời người thật** (comment, inbox, outreach). Xem `references/ai-operating-model.md`.
@@ -86,9 +86,6 @@ python3 scripts/outreach_queue.py --list prospect-list.csv --done p001 p002
 
 ## References
 
-### Mảng sản phẩm
-- [google-workspace-line.md](./references/google-workspace-line.md) — mảng Google Workspace độc lập: ICP renewal/migration, offer, kênh (không LinkedIn), quy trình gia hạn, KPI riêng, **ranh giới với MineFlow**
-
 ### Vận hành
 - [ai-operating-model.md](./references/ai-operating-model.md) — phân vai AI / script / Henry, Weekly Input Brief 8 câu, checklist duyệt 60 giây, thời gian thật của Henry, tiêu thời gian tiết kiệm vào đâu
 
@@ -107,6 +104,7 @@ python3 scripts/outreach_queue.py --list prospect-list.csv --done p001 p002
 ### Scripts
 - [get_token.py](./scripts/get_token.py) — lấy LinkedIn access token bằng OAuth, tự hứng callback và ghi `.env` quyền 600. **Chạy trên máy cá nhân**
 - [make_image.py](./scripts/make_image.py) — dựng ảnh 1200×1200 từ 5 mẫu visual, render bằng Chromium headless
+- [lint_posts.py](./scripts/lint_posts.py) — kiểm tra bài trước khi đăng: độ dài, hook, hashtag, link ngoài, placeholder chưa điền
 - [linkedin_post.py](./scripts/linkedin_post.py) — đăng 1 bài: text, 1 ảnh, hoặc nhiều ảnh
 - [run_queue.py](./scripts/run_queue.py) — đọc CSV, đăng bài tới hạn, ghi ngược kết quả
 - [outreach_queue.py](./scripts/outreach_queue.py) — in việc outreach hôm nay kèm tin nhắn đã điền, theo dõi pipeline. **Không gửi gì lên LinkedIn**

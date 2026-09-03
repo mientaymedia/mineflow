@@ -10,3 +10,6 @@ run.log
 
 # Outreach - danh sách khách hàng tiềm năng là dữ liệu cá nhân, không commit
 prospect-list.csv
+
+# GWS - danh sách khách hàng, không commit
+renewal-tracker.csv

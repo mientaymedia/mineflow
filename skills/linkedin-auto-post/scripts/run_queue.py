@@ -29,6 +29,7 @@ import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from linkedin_post import DEFAULT_VERSION, LinkedInError, publish  # noqa: E402
+from lint_posts import check as lint_check  # noqa: E402
 
 FIELDS = ["id", "publish_at", "status", "text_file", "image", "alt_text",
           "visibility", "post_urn", "posted_at", "note"]
@@ -154,6 +155,14 @@ def run(args):
             with open(text_path, "r", encoding="utf-8") as fh:
                 text = fh.read().strip()
 
+            # Chốt an toàn cuối: bài còn lỗi lint thì không lên feed, kể cả khi
+            # status đã là 'ready'. Bắt được cả trường hợp đổi status nhầm cho
+            # một bài mới chỉ là khung chờ nguyên liệu.
+            if not args.skip_lint:
+                lint_errors, _, _ = lint_check(text_path)
+                if lint_errors:
+                    raise ValueError("lint chặn: " + "; ".join(lint_errors))
+
             images = [resolve(p, base_dir) for p in split_list(row.get("image"))]
             alts = split_list(row.get("alt_text"))
             if images and len(alts) != len(images):
@@ -202,6 +211,8 @@ def main(argv=None):
     parser.add_argument("--author-urn", help="Ghi đè LINKEDIN_AUTHOR_URN")
     parser.add_argument("--api-version",
                         default=os.environ.get("LINKEDIN_API_VERSION", DEFAULT_VERSION))
+    parser.add_argument("--skip-lint", action="store_true",
+                        help="Bỏ qua kiểm tra lint trước khi đăng (không khuyến khích)")
     parser.add_argument("--dry-run", action="store_true",
                         help="In payload, không gọi API, không sửa CSV")
     return run(parser.parse_args(argv))

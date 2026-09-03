@@ -8,7 +8,7 @@
 ## 0. Phạm vi — tài liệu này chỉ phục vụ MineFlow và Zalo Business Solutions
 
 **Google Workspace là mảng sản phẩm riêng, không nằm trong kế hoạch nội dung LinkedIn.**
-Xem [google-workspace-line.md](./google-workspace-line.md) — ICP, offer, kênh, KPI và ranh giới của mảng đó.
+Xem [skills/gws-renewal](../../gws-renewal/) — ICP, offer, kênh, KPI và ranh giới của mảng đó.
 
 Lý do tách, gọn trong một bảng:
 
@@ -30,7 +30,7 @@ Workspace là tiêu thời gian ở sai kênh.
 3. Mỗi quý chọn **một** trọng tâm chiến lược. Hai mảng cùng là "chủ lực" nghĩa là không có chủ lực.
 
 Ngoại lệ duy nhất Workspace xuất hiện trên LinkedIn: tối đa **1 bài/tháng** thuộc Pillar 4,
-kể chuyện vận hành công ty một người — không bán gói. Chi tiết ở google-workspace-line.md mục 9.
+kể chuyện vận hành công ty một người — không bán gói. Chi tiết ở gws-renewal/references/product-line.md mục 9.
 
 ## 1. ICP cho LinkedIn — chủ shop bán sàn
 
@@ -258,7 +258,7 @@ Trong phạm vi tài liệu này (MineFlow + Zalo), cần bảng sau cho **3 th�
 | MineFlow CDP | | | | 1 (Hậu Tâm) | |
 | Zalo Business Solutions | | | | | |
 
-Dữ liệu mảng Google Workspace ghi ở [google-workspace-line.md](./google-workspace-line.md) mục 12 — **bảng riêng, không cộng vào bảng trên**.
+Dữ liệu mảng Google Workspace ghi ở [skills/gws-renewal](../../gws-renewal/) mục 12 — **bảng riêng, không cộng vào bảng trên**.
 
 Có đủ hai bảng, chấm điểm hai mảng theo khung 7 tiêu chí rồi chọn **một** trọng tâm cho quý.
 Chưa có, giữ nguyên tỉ lệ nội dung 60/40 ở mục 2 và không tăng đầu tư vào dòng nào.

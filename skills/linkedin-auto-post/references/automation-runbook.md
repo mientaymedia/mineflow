@@ -42,6 +42,15 @@ Copy `assets/content-queue.example.csv` làm điểm bắt đầu.
 | `posted_at` | auto | Script ghi vào, UTC ISO 8601 |
 | `note` | auto | Script ghi lỗi vào đây |
 
+**Hai chốt an toàn, không phải một:**
+
+1. **Cột `status`** — chỉ dòng `ready` mới được đăng.
+2. **Lint tự động** — trước mỗi lần đăng, `run_queue.py` chạy `lint_posts.py` trên bài đó.
+   Bài còn placeholder chưa điền, hook quá 200 ký tự, quá 3 hashtag, hoặc có link ngoài
+   trong body sẽ **bị từ chối kể cả khi `status` đã là `ready`**. Đây là lưới an toàn cho
+   trường hợp đổi `status` nhầm cho một bài mới chỉ là khung chờ nguyên liệu.
+   Bỏ qua bằng `--skip-lint` — không khuyến khích.
+
 **Cột `status` chính là chốt kiểm duyệt.** Viết bài xong để `draft`. Chỉ đổi sang `ready`
 sau khi đã đọc lại và chạy `--dry-run`. Không có bài nào tự lên feed mà bạn chưa duyệt.
 
@@ -50,6 +59,10 @@ sau khi đã đọc lại và chạy `--dry-run`. Không có bài nào tự lên
 ```bash
 cd ~/linkedin-ops
 set -a && source .env && set +a          # nạp LINKEDIN_ACCESS_TOKEN, LINKEDIN_AUTHOR_URN
+
+# B0: soát bài bằng lint trước khi duyệt
+python3 ~/mineflow/skills/linkedin-auto-post/scripts/lint_posts.py \
+  --queue content-queue.csv
 
 # B1: kiểm tra payload trước, không gọi API
 python3 ~/mineflow/skills/linkedin-auto-post/scripts/run_queue.py \
