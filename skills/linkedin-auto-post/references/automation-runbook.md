@@ -83,6 +83,7 @@ python3 ~/mineflow/skills/linkedin-auto-post/scripts/run_queue.py \
 ops-repo-template/
 ├── .github/workflows/linkedin-post.yml   # đăng bài, 12 lần/ngày trong khung giờ đăng
 ├── .github/workflows/gws-renewal.yml     # nhắc gia hạn, mở issue khi có việc
+├── setup.sh                              # cài toàn bộ bằng một lệnh, không cần GitHub
 ├── approve.sh                            # mở khoá bài đã duyệt: draft -> ready
 ├── .gitignore
 └── README.md                             # hướng dẫn cài đặt 5 bước
@@ -97,8 +98,9 @@ ops-repo-template/
 ./approve.sh w2-t3         # hoặc từng bài
 ```
 
-Hoặc chạy trên máy cá nhân: `scripts/install_cron.sh ~/linkedin-ops` — cài cron,
-chạy lại nhiều lần được, không nhân bản dòng cron, và kiểm tra `.env` có đúng quyền 600 không.
+**Đường ngắn nhất — không cần GitHub gì cả:** giải nén gói, chạy `./setup.sh`.
+Nó kiểm tra môi trường, lấy token, soát bài, cài cron và chạy thử trong một lệnh.
+GitHub Actions chỉ cần khi Henry không có máy bật thường xuyên.
 
 **Repo vận hành phải để private** — nó chứa nội dung chưa đăng và thông tin khách hàng.
 

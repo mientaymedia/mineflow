@@ -24,7 +24,28 @@ linkedin-ops/                  (private)
 └── renewal-tracker.csv        # danh sách gia hạn Workspace
 ```
 
-## Cài đặt — năm bước
+## Cài đặt — một lệnh
+
+```bash
+./setup.sh
+```
+
+Script kiểm tra môi trường, lấy token (mở trình duyệt để bấm Allow), soát bài,
+cài cron, rồi chạy thử. **Không cần GitHub, không cần repo, không cần secret.**
+Chạy lại nhiều lần được — nó phát hiện token còn hiệu lực thì bỏ qua bước lấy lại.
+
+Sau đó chỉ còn đọc bài và mở khoá:
+
+```bash
+cat drafts/w1-t3-ba-ho-so-mot-khach.txt
+./approve.sh --week 1
+```
+
+Muốn chạy trên GitHub Actions thay vì máy cá nhân thì theo phần dưới.
+
+---
+
+## Cài đặt trên GitHub Actions — năm bước
 
 ### 1. Tạo repo private
 
