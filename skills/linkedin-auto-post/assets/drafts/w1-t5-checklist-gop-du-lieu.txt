@@ -1,0 +1,25 @@
+Gộp dữ liệu khách từ sàn, POS và Zalo OA về một chỗ, trong 30 ngày, không cần đội IT.
+
+Đây là thứ tự tôi làm. Bảy bước, không có bước nào cần lập trình:
+
+1. Chốt khoá định danh. Số điện thoại, không phải email. Ở Việt Nam email trùng và sai rất nhiều.
+
+2. Xuất dữ liệu 12 tháng từ từng nguồn. Sàn, POS, Zalo OA. Xuất trước, đừng sửa gì vội.
+
+3. Chuẩn hoá số điện thoại. Bỏ khoảng trắng, đổi +84 về 0. Riêng bước này thường gộp thêm được 10-15% bản ghi.
+
+4. Gộp theo số điện thoại. Một khách một dòng. Ghi lại tổng chi tiêu và ngày mua gần nhất.
+
+5. Chia ba nhóm: mua một lần, mua nhiều lần, và đã im lặng trên 90 ngày. Chưa cần phân khúc phức tạp hơn.
+
+6. Đối chiếu với danh sách Zalo OA. Ai đã follow thì nhắn được miễn phí. Ai chưa thì mới cần ZNS.
+
+7. Gửi một chiến dịch cho một nhóm. Đo doanh thu phát sinh từ đúng nhóm đó trong 14 ngày.
+
+Bước hay bị bỏ qua nhất là số 3. Nó không hấp dẫn, nhưng bỏ qua thì các bước sau gộp sai hết.
+
+Bước khó nhất không phải kỹ thuật. Là bước 7: dám đo, và dám chấp nhận con số đầu tiên có thể xấu.
+
+Lưu lại khi cần dùng.
+
+#CDP #BanLe #ZaloOA

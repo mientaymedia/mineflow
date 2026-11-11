@@ -1,0 +1,9 @@
+id,khach_hang,nguoi_lien_he,zalo_or_phone,so_seat,gia_moi_seat_nam,expiry_date,stage,last_touch_at,last_stage_done,note
+c001,Công ty A,Chị Lan,0900000567,25,1500000,2026-09-08,active,,T-14,"Đã báo giá, chờ duyệt"
+c002,Công ty B,Anh Minh,0900000678,12,1500000,2026-10-01,active,,,
+c003,Công ty C,Chị Hà,0900000789,60,1400000,2026-11-27,active,,,Đang cân nhắc thêm 20 seat
+c004,Công ty D,Anh Tú,0900000890,8,1600000,2026-08-31,active,,T-7,QUÁ HẠN
+c005,Công ty E,Chị Mai,0900000901,30,1500000,2027-03-22,active,,,
+c006,Công ty F,Anh Nam,0900000012,15,1500000,2027-06-30,renewed,,,
+c007,Công ty G,Chị Thu,0900000123,10,1500000,2026-07-05,churned,,,Chuyển sang bên khác
+c008,Công ty H,Anh Sơn,0900000234,5,1500000,ngay-sai,active,,,

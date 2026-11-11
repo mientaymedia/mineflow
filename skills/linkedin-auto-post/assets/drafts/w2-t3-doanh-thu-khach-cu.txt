@@ -1,0 +1,26 @@
+Tháng này bao nhiêu phần trăm doanh thu đến từ khách đã mua lần hai?
+
+Nếu phải đi hỏi kế toán mới trả lời được, đó chính là vấn đề.
+
+Không phải vì con số xấu. Vì con số đó không nằm ở nơi nó cần nằm: trên bàn của người ra quyết định, mỗi tuần.
+
+Hầu hết thương hiệu tôi gặp đo rất kỹ phần đầu phễu. Chi phí mỗi lượt click. Tỉ lệ chuyển đổi. Doanh thu trên chi phí quảng cáo.
+
+Rồi dừng lại ở đó.
+
+Phần sau đơn hàng đầu tiên gần như không ai đo:
+
+→ Bao nhiêu khách quay lại trong 90 ngày
+→ Khoảng cách trung bình giữa lần mua thứ nhất và thứ hai
+→ Nhóm khách nào quay lại nhiều nhất
+→ Doanh thu từ khách cũ chiếm bao nhiêu phần trăm tổng doanh thu
+
+Bốn con số đó quyết định bạn đang xây một doanh nghiệp hay đang vận hành một cỗ máy đốt tiền quảng cáo.
+
+Và cả bốn đều tính được từ dữ liệu bạn đã có. Không cần mua thêm gì.
+
+Vấn đề không phải thiếu dữ liệu. Là dữ liệu nằm rải rác đến mức không ai ngồi ghép lại.
+
+Bạn đang đo con số nào trong bốn cái trên?
+
+#CDP #TMDT #BanLe

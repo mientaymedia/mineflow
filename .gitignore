@@ -3,3 +3,13 @@ __pycache__/
 .idea/
 .vscode/
 
+# LinkedIn ops - không commit token hoặc dữ liệu vận hành
+.env
+content-queue.csv
+run.log
+
+# Outreach - danh sách khách hàng tiềm năng là dữ liệu cá nhân, không commit
+prospect-list.csv
+
+# GWS - danh sách khách hàng, không commit
+renewal-tracker.csv

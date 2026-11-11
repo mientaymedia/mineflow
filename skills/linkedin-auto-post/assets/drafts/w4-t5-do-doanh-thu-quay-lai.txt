@@ -1,0 +1,25 @@
+Cách đo xem chiến dịch nhắn lại khách cũ có thực sự tạo ra tiền hay không.
+
+Đây là phần hầu hết bỏ qua, và cũng là phần khiến người ta chi tiền nhiều năm mà không biết có hiệu quả không.
+
+Công thức đơn giản đến mức khó chịu:
+
+Bước 1. Chọn nhóm khách sẽ nhắn. Ví dụ: đã mua, im lặng trên 90 ngày.
+
+Bước 2. Giữ lại 10 phần trăm nhóm đó làm nhóm đối chứng. Không nhắn gì cả.
+
+Bước 3. Gửi cho 90 phần trăm còn lại.
+
+Bước 4. Sau 14 ngày, tính doanh thu trung bình trên mỗi người ở cả hai nhóm.
+
+Bước 5. Lấy hiệu số nhân với số người đã nhận tin.
+
+Con số đó mới là doanh thu chiến dịch tạo ra. Không phải tổng doanh thu của nhóm nhận tin.
+
+Vì sao phải làm phiền phức vậy: một phần khách cũ sẽ quay lại mua kể cả bạn không nhắn gì. Nếu tính hết vào thành tích của chiến dịch, bạn đang tự khen mình về việc mình không làm.
+
+Lần đầu đo, con số thường thấp hơn kỳ vọng. Đó là tin tốt. Nó cho bạn một mốc thật để cải thiện, thay vì một con số đẹp không dùng được vào việc gì.
+
+Chiến dịch gần nhất của bạn có nhóm đối chứng không?
+
+#CDP #ZNS #TMDT

@@ -1,0 +1,13 @@
+[[ BÀI NÀY CHƯA VIẾT ĐƯỢC — CHỜ NGUYÊN LIỆU TỪ HENRY ]]
+
+Pillar 2 (Proof). Cần ba thứ từ khách hàng đầu tiên trước khi viết:
+
+  (a) Cho phép nêu tên, hay viết ẩn danh ("một thương hiệu TPCN")?
+  (b) Ba chỉ số trước/sau được phép công bố. Ví dụ: tỉ lệ khách quay lại,
+      số khách gộp được, doanh thu từ nhóm khách cũ.
+  (c) Một câu nhận xét của họ để trích dẫn.
+
+Có đủ ba thứ, AI viết bài theo template T3 trong post-templates.md.
+
+KHÔNG đăng bài này với số liệu bịa. Số sai sẽ vỡ ở buổi discovery đầu tiên,
+và mất luôn khách hàng tham chiếu duy nhất đang có.

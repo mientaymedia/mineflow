@@ -1,0 +1,6 @@
+.env
+run.log
+run-output.txt
+out.txt
+__pycache__/
+.DS_Store
