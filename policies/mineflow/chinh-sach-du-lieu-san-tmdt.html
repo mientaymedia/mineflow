@@ -1,0 +1,97 @@
+<!-- Mineflow · Dữ liệu tích hợp sàn TMĐT · URL đề xuất: https://mineflow.vn/chinh-sach-du-lieu-san-tmdt
+  Dán toàn bộ khối này vào phần tử HTML/Custom code. Chỗ tô vàng là thông tin cần điền. -->
+<div class="mf-policy">
+<style>
+.mf-policy{--t:#1f2937;--m:#6b7280;--l:#e5e7eb;--a:#4f46e5;--s:#f8fafc;color:var(--t);background:#fff;line-height:1.7;font-size:16px;max-width:880px;margin:0 auto;padding:32px 16px 48px;box-sizing:border-box;font-family:inherit}
+.mf-policy *{box-sizing:border-box}
+.mf-policy h1{font-size:30px;line-height:1.3;margin:0 0 8px}
+.mf-policy h2{font-size:20px;margin:36px 0 12px;padding-top:16px;border-top:1px solid var(--l)}
+.mf-policy p,.mf-policy li{margin:0 0 8px}.mf-policy ul,.mf-policy ol{padding-left:22px;margin:0 0 12px}
+.mf-policy a{color:var(--a)}.mf-policy .mf-meta{color:var(--m);font-size:14px;margin-bottom:20px}
+.mf-policy .mf-table-wrap{overflow-x:auto;margin:8px 0 16px}
+.mf-policy table{width:100%;border-collapse:collapse;font-size:15px;min-width:480px}
+.mf-policy th,.mf-policy td{border:1px solid var(--l);padding:8px 10px;text-align:left;vertical-align:top}
+.mf-policy th{background:var(--s)}
+.mf-policy .mf-note{background:#fffbeb;border-left:4px solid #f59e0b;padding:10px 14px;border-radius:6px;margin:12px 0}
+.mf-policy .mf-company{list-style:none;padding:14px 18px;background:var(--s);border:1px solid var(--l);border-radius:10px}
+.mf-policy .mf-ph{background:#fef08a;padding:0 3px;border-radius:3px}
+.mf-policy .mf-related{margin-top:40px;padding:16px 18px;background:var(--s);border-radius:10px;font-size:15px}
+@media(max-width:600px){.mf-policy{font-size:15px}.mf-policy h1{font-size:24px}.mf-policy h2{font-size:18px}}
+</style>
+<h1>Chính sách dữ liệu tích hợp sàn thương mại điện tử</h1>
+<p class="mf-meta">Shopee · TikTok Shop · Lazada · Ngày ban hành: <mark class="mf-ph">[DD/MM/2026]</mark> · <a href="#english">English version</a></p>
+
+<p>Trang này mô tả cách Mineflow, sản phẩm của <strong>Công ty TNHH Phần mềm Mientay Media</strong>, truy cập và xử lý dữ liệu khi người bán (“Shop”) kết nối gian hàng trên <strong>Shopee, TikTok Shop, Lazada</strong> với Mineflow qua API chính thức của các sàn (Shopee Open Platform, TikTok Shop Partner Center, Lazada Open Platform). Chính sách này bổ sung cho <a href="https://mineflow.vn/chinh-sach-bao-mat">Chính sách bảo mật</a>.</p>
+
+<h2>1. Nguyên tắc chung</h2>
+<ul>
+  <li>Mineflow chỉ truy cập dữ liệu khi <strong>chính chủ Shop</strong> đăng nhập trên trang của sàn và bấm đồng ý cấp quyền (OAuth). Mineflow không yêu cầu, không lưu mật khẩu tài khoản người bán.</li>
+  <li>Chỉ xin <strong>phạm vi quyền tối thiểu</strong> cần cho tính năng Shop sử dụng.</li>
+  <li>Dữ liệu từ sàn chỉ phục vụ <strong>chính Shop đã cấp quyền</strong>, không chia sẻ cho Shop khác hoặc bên thứ ba vì mục đích thương mại.</li>
+  <li>Mineflow tuân thủ điều khoản nhà phát triển, chính sách bảo vệ dữ liệu và chính sách API của từng sàn. Khi chính sách của sàn chặt chẽ hơn trang này, chính sách của sàn được áp dụng.</li>
+</ul>
+
+<h2>2. Dữ liệu được truy cập</h2>
+<div class="mf-table-wrap"><table>
+<thead><tr><th>Nhóm dữ liệu</th><th>Ví dụ</th><th>Mục đích</th></tr></thead>
+<tbody>
+<tr><td>Thông tin gian hàng</td><td>Mã shop, tên shop, khu vực</td><td>Xác định gian hàng đã kết nối</td></tr>
+<tr><td>Sản phẩm &amp; tồn kho</td><td>Tên, SKU, giá, hình ảnh, tồn kho</td><td>Hiển thị danh mục, báo cáo doanh số theo sản phẩm</td></tr>
+<tr><td>Đơn hàng</td><td>Mã đơn, trạng thái, sản phẩm, giá trị, phí, thời gian, mã vận đơn</td><td>Đồng bộ đơn, báo cáo, chăm sóc sau bán</td></tr>
+<tr><td>Thông tin người mua</td><td>Ở mức sàn cung cấp qua API (thường đã được che hoặc mã hóa một phần)</td><td>Gắn đơn với hồ sơ khách hàng, hỗ trợ giao hàng và xử lý khiếu nại của chính đơn đó</td></tr>
+<tr><td>Trả hàng / hoàn tiền</td><td>Mã yêu cầu, lý do, trạng thái</td><td>Theo dõi tỷ lệ hoàn, chăm sóc sau bán</td></tr>
+</tbody></table></div>
+<p>Phạm vi thực tế có thể hẹp hơn tùy quyền mà sàn phê duyệt cho Mineflow và quyền Shop chọn cấp.</p>
+
+<h2>3. Những việc Mineflow cam kết KHÔNG làm</h2>
+<ul>
+  <li>Không bán, cho thuê hoặc trao đổi dữ liệu lấy từ sàn.</li>
+  <li>Không dùng thông tin người mua lấy từ API sàn để gửi quảng cáo, tin nhắn marketing ngoài sàn, trừ khi người mua <strong>tự nguyện và trực tiếp</strong> cung cấp thông tin, đồng ý nhận tin với Shop qua kênh riêng của Shop (ví dụ: tự nhập mã đơn trên Zalo Mini App của Shop để nhận quà, kèm ô đồng ý rõ ràng).</li>
+  <li>Không cố gắng giải mã, khôi phục hoặc làm lộ thông tin người mua mà sàn đã che.</li>
+  <li>Không dùng dữ liệu của một Shop để phân tích, so sánh hoặc phục vụ Shop khác.</li>
+  <li>Không dùng dữ liệu từ sàn để huấn luyện mô hình AI dùng chung.</li>
+  <li>Không dùng dữ liệu để cạnh tranh với sàn hoặc lôi kéo người mua rời khỏi sàn, trái với chính sách của sàn.</li>
+</ul>
+
+<h2>4. Lưu trữ &amp; bảo mật</h2>
+<ul>
+  <li>Token truy cập được mã hóa khi lưu, chỉ hệ thống đồng bộ được dùng; nhân sự không xem được token ở dạng gốc.</li>
+  <li>Dữ liệu được lưu tại <mark class="mf-ph">[Tên nhà cung cấp hạ tầng, vị trí máy chủ – ví dụ: Viettel IDC, Việt Nam]</mark>, tách biệt theo từng tài khoản Shop, truyền tải qua HTTPS/TLS.</li>
+  <li>Thông tin cá nhân của người mua lấy từ sàn được lưu <strong>tối đa 90 ngày</strong> kể từ khi đơn hoàn tất, hoặc ngắn hơn nếu chính sách của sàn yêu cầu. Sau đó, thông tin này được xóa hoặc ẩn danh hóa; số liệu tổng hợp (doanh thu, số đơn) có thể được giữ để làm báo cáo.</li>
+  <li>Truy cập của nhân sự được phân quyền và ghi nhật ký. Sự cố bảo mật được thông báo cho Shop và sàn liên quan trong vòng 72 giờ.</li>
+</ul>
+
+<h2>5. Ngắt kết nối &amp; xóa dữ liệu</h2>
+<ul>
+  <li>Shop có thể ngắt kết nối bất cứ lúc nào tại <em>Mineflow → Tích hợp → [Tên sàn] → Ngắt kết nối</em>, hoặc thu hồi quyền ngay trên trang quản lý ứng dụng của sàn.</li>
+  <li>Khi ngắt kết nối hoặc ủy quyền hết hạn: Mineflow ngừng đồng bộ ngay, xóa token trong vòng 24 giờ, xóa thông tin người mua lấy từ sàn trong vòng 30 ngày.</li>
+  <li>Shop có thể yêu cầu xóa toàn bộ dữ liệu sàn sớm hơn qua <a href="mailto:support@mineflow.vn">support@mineflow.vn</a>. Xem <a href="https://mineflow.vn/chinh-sach-xoa-du-lieu">Chính sách xóa dữ liệu &amp; ngắt kết nối</a>.</li>
+</ul>
+
+<h2>6. Trách nhiệm của Shop</h2>
+<ul>
+  <li>Chỉ kết nối gian hàng mà mình sở hữu hoặc được ủy quyền hợp pháp.</li>
+  <li>Tuân thủ chính sách của sàn khi sử dụng dữ liệu đơn hàng và người mua, kể cả khi dùng tính năng workflow, ZNS, email của Mineflow.</li>
+  <li>Chịu trách nhiệm xin sự đồng ý của người mua trước khi gửi tin marketing qua kênh ngoài sàn.</li>
+</ul>
+
+<h2>7. Liên hệ</h2>
+<p>Câu hỏi về dữ liệu tích hợp sàn: <a href="mailto:support@mineflow.vn">support@mineflow.vn</a> · Hotline 0976.788.840.</p>
+<ul class="mf-company"><li><strong>CÔNG TY TNHH PHẦN MỀM MIENTAY MEDIA</strong> — đơn vị phát triển và vận hành Mineflow</li><li>Mã số doanh nghiệp: 1602182849 — do Sở Kế hoạch và Đầu tư tỉnh An Giang cấp ngày 13/06/2024</li><li>Người đại diện theo pháp luật: Ông Đinh Văn Tạo Em</li><li>Địa chỉ: 12A5 Lê Thị Hồng Gấm, P. Bình Đức, tỉnh An Giang</li><li>Hotline: 0976.788.840 · Email: <a href="mailto:support@mineflow.vn">support@mineflow.vn</a></li><li>Giờ làm việc: Thứ 2 – Thứ 6, 8:00 – 17:30</li></ul>
+
+<h2 id="english">English version — Marketplace Integration Data Policy</h2>
+<p>This policy describes how Mineflow, operated by <strong>MIENTAY MEDIA SOFTWARE COMPANY LIMITED</strong> (Enterprise Code 1602182849, Vietnam), accesses and processes data when a seller connects a <strong>Shopee, TikTok Shop or Lazada</strong> store through each platform's official Open API.</p>
+<ol>
+  <li><strong>Authorization:</strong> access is granted only when the store owner authorizes Mineflow through the platform's OAuth flow. We never request or store seller passwords. We request the minimum scopes needed.</li>
+  <li><strong>Data accessed:</strong> shop profile; products, SKUs, prices and stock; orders (ID, status, items, amounts, fees, timestamps, tracking number); buyer information only as provided by the platform API (often masked); returns and refunds.</li>
+  <li><strong>Purpose:</strong> exclusively to provide the authorizing seller with order sync, unified customer profiles, reporting and after-sales support for those orders.</li>
+  <li><strong>Restrictions:</strong> we do not sell, rent or share marketplace data; we do not use buyer data obtained from the API for off-platform marketing unless the buyer has directly and voluntarily provided their details and consent to the seller through the seller's own channel; we do not attempt to unmask masked data; we do not use one seller's data for another seller; we do not use marketplace data to train shared AI models.</li>
+  <li><strong>Security:</strong> tokens are encrypted at rest; data is isolated per seller workspace and encrypted in transit (TLS); staff access is role-based and logged; security incidents are reported to affected sellers and platforms within 72 hours.</li>
+  <li><strong>Retention:</strong> buyer personal data from marketplaces is kept for no more than 90 days after order completion, or shorter where the platform requires, then deleted or anonymized.</li>
+  <li><strong>Deauthorization &amp; deletion:</strong> sellers can disconnect at any time in Mineflow or on the platform. On disconnection, syncing stops immediately, tokens are deleted within 24 hours and buyer data from the platform is deleted within 30 days. Deletion requests: <a href="mailto:support@mineflow.vn">support@mineflow.vn</a>.</li>
+  <li><strong>Platform terms prevail:</strong> where a platform's developer terms or data policy are stricter than this policy, the platform's rules apply.</li>
+</ol>
+<p>Contact: <a href="mailto:support@mineflow.vn">support@mineflow.vn</a> · 0976.788.840 · 12A5 Le Thi Hong Gam, Binh Duc Ward, An Giang, Vietnam.</p>
+
+<div class="mf-related"><strong>Các chính sách khác:</strong> <a href="https://mineflow.vn/chinh-sach-bao-mat">Chính sách bảo mật</a> · <a href="https://mineflow.vn/dieu-khoan-su-dung">Điều khoản sử dụng</a> · <a href="https://mineflow.vn/chinh-sach-thanh-toan-hoan-tien">Thanh toán & hoàn tiền</a> · <a href="https://mineflow.vn/chinh-sach-xoa-du-lieu">Xóa dữ liệu & ngắt kết nối</a> · <a href="https://mineflow.vn/chinh-sach-ho-tro-khieu-nai">Hỗ trợ & khiếu nại</a></div>
+</div>
